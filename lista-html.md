@@ -1,4 +1,4 @@
-# Lista de leitura do HTML
+# Lista de leitura sobre HTML
 
 ## W3Schools
 Segue abaixo uma lista de leitura obrigatória sobre HTML do site w3schools:
