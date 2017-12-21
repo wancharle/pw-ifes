@@ -4,13 +4,12 @@
 Segue abaixo uma lista de leitura obrigatória sobre HTML do site w3schools:
 
 1. Introdução a HTML: https://www.w3schools.com/html/html_intro.asp
-
     1. O básico que vc precisa saber de HTML: https://www.w3schools.com/html/html_basic.asp
-
     2. O essencial sobre os elementos do HTML: https://www.w3schools.com/html/html_elements.asp
-
     3. O essencial sobre os atributos de elementos do HTML: https://www.w3schools.com/html/html_attributes.asp
-    4. Um página com informação sobre todas as tags HTMLs: https://www.w3schools.com/tags/default.asp
+    4. Blocos essenciais(div e span): https://www.w3schools.com/html/html_blocks.asp
+    5. Um página com informação sobre todas as tags HTMLs: https://www.w3schools.com/tags/default.asp
+   
 
 2. Como utilizar estilos css nas próprias tags: https://www.w3schools.com/html/html_styles.asp
 
