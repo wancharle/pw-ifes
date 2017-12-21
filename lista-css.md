@@ -19,20 +19,19 @@
 
 ## W3.css
 
-Abaixo segue uns links sobre um framework chamado W3.css que facilita o desenvolvimento de layouts para sites.
-Sobre o W3.css
-https://www.w3schools.com/w3css/default.asp
+Abaixo segue uns links sobre um framework chamado W3.css que facilita o desenvolvimento de layouts para sites:
 
-W3.css uso de cores
-https://www.w3schools.com/w3css/w3css_intro.asp
+1. Sobre o W3.css: https://www.w3schools.com/w3css/default.asp
 
-W3.css uso de formularios e inputs
-https://www.w3schools.com/w3css/w3css_input.asp
+2. W3.css uso de cores: https://www.w3schools.com/w3css/w3css_intro.asp
 
-W3.css e tema do Material do google android
-https://www.w3schools.com/w3css/w3css_material.asp
+3. W3.css uso de formularios e inputs: https://www.w3schools.com/w3css/w3css_input.asp
 
-W3.css efeitos e animacoes (para as transicoes entre as telas)
-https://www.w3schools.com/w3css/w3css_effects.asp
-https://www.w3schools.com/w3css/w3css_animate.asp
+4. W3.css e tema do Material do google android: https://www.w3schools.com/w3css/w3css_material.asp
+
+5. W3.css efeitos e animacoes (para as transicoes entre as telas): 
+    1. Efeitos: https://www.w3schools.com/w3css/w3css_effects.asp
+    2. Animações: https://www.w3schools.com/w3css/w3css_animate.asp
+    
+.
 
