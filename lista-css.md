@@ -2,17 +2,17 @@
 
 ## CSS
 1. Introdução a estilos CSS: https://www.w3schools.com/css/css_intro.asp
-  1. Sintaxe do css: https://www.w3schools.com/css/css_syntax.asp
-  2. As formas de inserir css numa pagina: https://www.w3schools.com/css/css_howto.asp
+    1. Sintaxe do css: https://www.w3schools.com/css/css_syntax.asp
+    2. As formas de inserir css numa pagina: https://www.w3schools.com/css/css_howto.asp
   
 2. Alteraçes importantes:
-  1. Como alterar cores? https://www.w3schools.com/css/css_colors.asp
-  2. Como alterar fundos? https://www.w3schools.com/css/css_background.asp
-  3. Como alterar bordas? https://www.w3schools.com/css/css_border.asp
-  4. Como alterar margens? https://www.w3schools.com/css/css_margin.asp
-  5. Como alterar preenchimentos? https://www.w3schools.com/css/css_padding.asp
-  6. Como alterar a largura e altura de elementos? https://www.w3schools.com/css/css_dimension.asp
-  7. O modelo de caixa de todo elmento em CSS: https://www.w3schools.com/css/css_boxmodel.asp
+    1. Como alterar cores? https://www.w3schools.com/css/css_colors.asp
+    2. Como alterar fundos? https://www.w3schools.com/css/css_background.asp
+    3. Como alterar bordas? https://www.w3schools.com/css/css_border.asp
+    4. Como alterar margens? https://www.w3schools.com/css/css_margin.asp
+    5. Como alterar preenchimentos? https://www.w3schools.com/css/css_padding.asp
+    6. Como alterar a largura e altura de elementos? https://www.w3schools.com/css/css_dimension.asp
+    7. O modelo de caixa de todo elmento em CSS: https://www.w3schools.com/css/css_boxmodel.asp
   
 3. Como utilizar a propriedade float? https://www.w3schools.com/css/css_float.asp
 
