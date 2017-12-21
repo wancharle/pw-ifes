@@ -1,6 +1,6 @@
 # Lista de leitura do HTML
 
-Segue abaixo uma lista de leitura obrigatória sobre HTML
+Segue abaixo uma lista de leitura obrigatória sobre HTML do site w3schools:
 
 1. Introdução a HTML: https://www.w3schools.com/html/html_intro.asp
 
@@ -22,3 +22,21 @@ Segue abaixo uma lista de leitura obrigatória sobre HTML
 6. HTML e Scripts(Javascript): https://www.w3schools.com/html/html_scripts.asp
 
 7. HTML e Layout da Pagina: https://www.w3schools.com/html/html_layout.asp
+
+Observação: o site w3schools oferece nas suas paginas um botão "try it yourself" para cada exemplo importante. Assim vc pode clicar e ver o exemplo que ele está comentando em execução no seu próprio navegador e fazer alterações.
+
+
+Segue abaixo uma lista de leitura para a [apostila](apostila-flavio-izo.pdf) do professor Flávio Izo:
+
+1. Introdução a HTML: (capítulo 1)
+    
+    1. O que é linguagem client-side? (cap 1.2)
+    
+    2. O que é linguagem server-side? (cap 1.3)
+    
+    3. A estrutura da URL (cap 1.5)
+    
+2. Linguagem Client-side: (todo o capítulo 2)
+
+
+Observação importante: a leitura das sugestões acima (tanto do site quanto da apostila) são muito importantes para o entendimento "básico" de programação web. Mas não se limite a apenas aos links e textos que passei, pois o site e a apostila possuem outros assuntos importantes que devem ser apreendidos na media que for possível.
