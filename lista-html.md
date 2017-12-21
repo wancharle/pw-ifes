@@ -40,6 +40,6 @@ Segue abaixo uma lista de leitura para a [apostila](apostila-flavio-izo.pdf) do 
 
 
 ## Observações
-* O site w3schools oferece nas suas paginas um botão "try it yourself" para cada exemplo importante. Assim vc pode clicar e ver o exemplo que ele está comentando em execução no seu próprio navegador e fazer alterações.
+* O site w3schools oferece nas suas paginas um botão "try it yourself" para cada exemplo importante. Clique nesse botão para ver o exemplo em execução no seu próprio navegador e realizar alterações e testes nos códigos.
 
-* A leitura das sugestões acima (tanto do site quanto da apostila) são muito importantes para o entendimento "básico" de programação web. Mas não se limite a apenas aos links e textos que passei, pois o site e a apostila possuem outros assuntos importantes que devem ser apreendidos na media que for possível.
+* A leitura das sugestões de leitura acima (tanto do site quanto da apostila) são muito importantes para o entendimento "básico" de programação web. Mas não se limite a apenas aos links e textos que passei, pois o site e a apostila possuem outros assuntos importantes que devem ser aprendidos na media que for possível.
