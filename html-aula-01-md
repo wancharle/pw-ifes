@@ -9,7 +9,8 @@ HTML é uma linguagem de marcação padrão para criar páginas da Web.
 * Os elementos HTML são representados por tags.
 * As etiquetas HTML rotulam pedaços de conteúdo, como "cabeçalho", "parágrafo", "tabela", e assim por diante
 * Os navegadores não exibem as tags HTML, mas usam-nas para renderizar o conteúdo da página
-Um documento HTML simples
+
+## Um documento HTML simples
 Example
 <!DOCTYPE html>
 <html>
