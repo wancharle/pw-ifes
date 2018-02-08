@@ -79,19 +79,8 @@ Desde os primeiros dias da web, houve muitas versões do HTML:
 
 
 ## HTML Page Structure
-Below is a visualization of an HTML page structure:
+(em contrução )
 
-<html>
-<head>
-<title>Page title</title>
-</head>
-<body>
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
-</body>
-</html>
-Note: Only the content inside the <body> section (the white area above) is displayed in a browser.
 
 # Tradução
 Este texto é uma tradução da pagina https://www.w3schools.com/html/html_intro.asp
