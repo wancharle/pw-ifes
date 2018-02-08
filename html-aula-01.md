@@ -41,17 +41,42 @@ Exemplo Explicado
 ## Tags HTML
 As tags HTML são nomes de elementos rodeados por colchetes angulares:
 
-<tagname> o conteúdo vai aqui ... </ tagname>
+< tagname> o conteúdo vai aqui ... </ tagname>
 
-As tags HTML normalmente vêm em pares como <p> e </ p>
-A primeira tag em um par é a tag de início, a segunda tag é a etiqueta final
-A etiqueta final é escrita como a marca de início, mas com uma barra invertida inserida antes do nome da etiqueta
+As tags HTML normalmente vêm em pares como < p> e </ p>
+A primeira tag em um par é a tag de início, a segunda tag é a tag final
+A tag final é escrita como a marca de início, mas com uma barra invertida ("/") inserida antes do nome da tag
 Dica: A tag de início também é chamada de tag de abertura e a etiqueta final da tag de fechamento.
 
 ## Navegadores da Web
 O objetivo de um navegador web (Chrome, IE, Firefox, Safari) é ler documentos HTML e exibi-los.
 
-O navegador não exibe as tags HTML, mas as usa para determinar como exibir o documento:
+O navegador não exibe as tags HTML, mas as usa para determinar como exibir o documento.
+
+
+## A declaração <!DOCTYPE> 
+A declaração <! DOCTYPE> representa o tipo de documento e ajuda os navegadores a exibir páginas da Web corretamente.
+
+Ele só deve aparecer uma vez, no topo da página (antes de quaisquer tags HTML).
+
+A declaração <! DOCTYPE> não diferencia maiúsculas de minúsculas.
+
+A declaração <! DOCTYPE> para HTML5 é:
+
+<! DOCTYPE html>
+
+## Versões do HTML
+Desde os primeiros dias da web, houve muitas versões do HTML:
+
+| Versão | 	Ano |
+|---------|--------|
+|HTML	    |1991    |
+|HTML 2.0	|1995.   |
+|HTML 3.2	|1997.   |
+|HTML 4.01|	1999.  |
+|XHTML	  |2000.   |
+|HTML5	  |2014.   |
+
 
 ## HTML Page Structure
 Below is a visualization of an HTML page structure:
@@ -67,28 +92,6 @@ Below is a visualization of an HTML page structure:
 </body>
 </html>
 Note: Only the content inside the <body> section (the white area above) is displayed in a browser.
-
-## The <!DOCTYPE> Declaration
-The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.
-
-It must only appear once, at the top of the page (before any HTML tags).
-
-The <!DOCTYPE> declaration is not case sensitive.
-
-The <!DOCTYPE> declaration for HTML5 is:
-
-<!DOCTYPE html>
-
-## HTML Versions
-Since the early days of the web, there have been many versions of HTML:
-
-Version	Year
-HTML	1991
-HTML 2.0	1995
-HTML 3.2	1997
-HTML 4.01	1999
-XHTML	2000
-HTML5	2014
 
 # Tradução
 Este texto é uma tradução da pagina https://www.w3schools.com/html/html_intro.asp
