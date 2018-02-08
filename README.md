@@ -3,7 +3,6 @@ Material de apoio para disciplina de Programação Web do Instituto Federal do E
 
 ## Aulas
 
-Aula 1
 1. [Introdução](html-aula-01.md)
 
 
