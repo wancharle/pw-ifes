@@ -33,7 +33,47 @@ document.getElementById("resultado").innerHTML = 5 + 6;
 ```
 [Tente vc mesmo](https://www.w3schools.com/code/tryit.asp?filename=FOXZDR18SZQS)
 
-> ** Nota: ** Mudar a propriedade **innerHTML**  é uma das formas mais comuns de se exibir dados em HTML.
+> **Nota:** Mudar a propriedade **innerHTML**  é uma das formas mais comuns de se exibir dados em HTML.
 
 ## Usando document.write()
+Para próposito de testes, é conveniente usar **document.write()**:
+
+```HTML
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Meu primeiro cabeçalho</h2>
+<p>Meu primeiro parágrafo.</p>
+
+<script>
+document.write(5 + 6);
+</script>
+
+</body>
+</html> 
+```
+[Tente vc mesmo](https://www.w3schools.com/code/tryit.asp?filename=FOXZWUX5FU6W)
+
+Mas observe que ao usar o **document.write()** após o carregamento completo de um documento HTML irá apagar todo o conteúdo HTML pré-existente.
+
+```HTML
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Meu primeiro Cabeçalho</h2>
+<p>Meu primeiro parágrafo.</p>
+
+<button type="button" onclick="document.write(5 + 6)">Testar</button>
+
+</body>
+</html> 
+```
+
+[Tente vc mesmo](https://www.w3schools.com/code/tryit.asp?filename=FOY13GBNYSVN)
+
+> **NOTA:** O método document.write() deveria ser usado apenas para teste.
+
+
 
