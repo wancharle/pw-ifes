@@ -118,4 +118,5 @@ console.log(5 + 6);
 [Tente vc mesmo](https://www.w3schools.com/code/tryit.asp?filename=FOY1I00J6DHB)
 
 
-
+# Tradução
+Este texto é uma tradução da pagina https://www.w3schools.com/js/js_output.asp
