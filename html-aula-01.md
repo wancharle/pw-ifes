@@ -27,6 +27,7 @@ Exemplo
 </body>
 </html>
 ```
+[Clique aqui para testar o código do exemplo acima](https://www.w3schools.com/code/tryit.asp?filename=FOXYJCVBZ72A)
 
 Exemplo Explicado
 
