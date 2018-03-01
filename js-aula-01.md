@@ -75,5 +75,47 @@ Mas observe que ao usar o **document.write()** após o carregamento completo de 
 
 > **NOTA:** O método document.write() deveria ser usado apenas para teste.
 
+## Usando o window.alert()
+Voce pode usar um janela de alerta para mostrar dados: 
+
+```HTML
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Meu primeiro cabeçalho</h2>
+<p>Meu primeiro parágrafo</p>
+
+<script>
+window.alert(5 + 6);
+</script>
+
+</body>
+</html> 
+```
+
+[Tente vc mesmo](https://www.w3schools.com/code/tryit.asp?filename=FOY1BNGQ5YH2)
+
+## Usando o console.log()
+Para fins de depuração, você pode usar o método **console.log()** para exibir dados.
+
+```HTML
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Ative a área de debug pressionando F12</h2>
+
+<p>Selecione "Console" no menu do  debugger. Então clique em Run novamente.</p>
+
+<script>
+console.log(5 + 6);
+</script>
+
+</body>
+</html> 
+```
+[Tente vc mesmo](https://www.w3schools.com/code/tryit.asp?filename=FOY1I00J6DHB)
+
 
 
