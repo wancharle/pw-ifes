@@ -53,7 +53,7 @@ Dica: A tag de início também é chamada de tag de abertura e a etiqueta final 
 O objetivo de um navegador web (Chrome, IE, Firefox, Safari) é ler documentos HTML e exibi-los.
 
 O navegador não exibe as tags HTML, mas as usa para determinar como exibir o documento.
-
+![alt text](https://www.w3schools.com/html/img_chrome.png)
 
 ## A declaração <!DOCTYPE> 
 A declaração <! DOCTYPE> representa o tipo de documento e ajuda os navegadores a exibir páginas da Web corretamente.
@@ -82,7 +82,9 @@ Desde os primeiros dias da web, houve muitas versões do HTML:
 
 
 ## HTML Page Structure
-(em contrução )
+
+Abaixo está uma visualização de uma estrutura de página HTML:
+![alt text](img/w3c/html-struct.png)
 
 
 # Tradução
