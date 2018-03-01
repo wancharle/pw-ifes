@@ -4,6 +4,7 @@ Material de apoio para disciplina de Programação Web do Instituto Federal do E
 ## Aulas
 
 1. [Introdução](html-aula-01.md)
+2. [Javascript Output](js-aula-01.md)
 
 
 ## Listas de Leitura
