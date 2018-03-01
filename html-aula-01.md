@@ -64,7 +64,9 @@ A declaração <! DOCTYPE> não diferencia maiúsculas de minúsculas.
 
 A declaração <! DOCTYPE> para HTML5 é:
 
+```HTML
 <! DOCTYPE html>
+```
 
 ## Versões do HTML
 Desde os primeiros dias da web, houve muitas versões do HTML:
