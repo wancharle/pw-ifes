@@ -1,0 +1,24 @@
+<table>
+	<tr>
+		<td onclick='verificarCelula(this)'>X</td>
+		<td onclick='verificarCelula(this)'>a</td>
+		<td onclick='verificarCelula(this)'>b</td>
+	</tr>
+	<tr>
+		<td onclick='verificarCelula(this)'>1</td>
+		<td onclick='verificarCelula(this)'>5</td>
+		<td onclick='verificarCelula(this)'>d</td>
+	</tr>
+	<tr>
+		<td onclick='verificarCelula(this)'>2</td>
+		<td onclick='verificarCelula(this)'>3</td>
+		<td onclick="verificarCelula(this)">4</td>
+	</tr>
+</table>
+
+<script>
+// função que eh chamado quando clico numa celula da tabela
+function verificarCelula (celula){
+	alert(celula.innerHTML);
+}
+</script>
