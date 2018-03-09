@@ -20,3 +20,9 @@ para "X" ou "O" de acordo com vez do jogador.
 	- PARA X OU 0 DE ACORDO COM A VEZ DO JOGADOR.
 		usamos a variavel jogador para saber.
 
+
+5- VERIFICAR SE OUVE GANHADOR 
+  Parte 1- verificar se o jogador X ganhou
+  Parte 2- verificar se of jagador 0 ganhou
+  Parte 3- verificar se ninguem ganhou ou que acabou o jogo.
+ 
