@@ -14,5 +14,9 @@ conteúdo dela('0' ou 'X')
 4- quando clicar numa celula e ela estiver vazia, altere o conteúdo
 para "X" ou "O" de acordo com vez do jogador.
 	- 1 detectar que a celula esta vazia.
+		usamos o "if"
 	- ALTERAR O CONTEUDO DELA
+		usamos o innerHTML
 	- PARA X OU 0 DE ACORDO COM A VEZ DO JOGADOR.
+		usamos a variavel jogador para saber.
+

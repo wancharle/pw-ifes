@@ -1,24 +1,59 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<style>
+	td { border: 1px solid black; width: 42px;height:42px;text-align:center;}
+	</style>
+</head>
 <table>
 	<tr>
-		<td onclick='verificarCelula(this)'>X</td>
+		<td onclick='verificarCelula(this)'></td>
 		<td onclick='verificarCelula(this)'>a</td>
-		<td onclick='verificarCelula(this)'>b</td>
+		<td onclick='verificarCelula(this)'></td>
 	</tr>
 	<tr>
-		<td onclick='verificarCelula(this)'>1</td>
+		<td onclick='verificarCelula(this)'></td>
 		<td onclick='verificarCelula(this)'>5</td>
-		<td onclick='verificarCelula(this)'>d</td>
+		<td onclick='verificarCelula(this)'></td>
 	</tr>
 	<tr>
 		<td onclick='verificarCelula(this)'>2</td>
-		<td onclick='verificarCelula(this)'>3</td>
+		<td onclick='verificarCelula(this)'>      </td>
 		<td onclick="verificarCelula(this)">4</td>
 	</tr>
 </table>
 
+<a href="#" onclick="reiniciarJogo()">Reiniciar jogo</a>
+
 <script>
-// função que eh chamado quando clico numa celula da tabela
+var jogador = "";
+// função que eh chamada quando clico numa celula da tabela
 function verificarCelula (celula){
-	alert(celula.innerHTML);
+	// se a celula estiver fazia
+	var conteudo_celula = celula.innerHTML;
+	
+	// limpando espaços
+	conteudo_celula = conteudo_celula.trim();
+	
+	// checko se a celula esta vazia
+	if (conteudo_celula == ""){
+		// se o jogador é o x
+		if (jogador == "X"){
+			celula.innerHTML = "X"
+			jogador = "0"
+		// senao
+		}else{
+			celula.innerHTML = "0"
+			jogador = "X"
+		}
+	// senão
+	}else {
+		alert("a celulá esta cheia com esse caracter:'" + conteudo_celula + "'")
+	}
+}
+
+function reiniciarJogo(){
+	var tds = document.getElementsByTagName('td')
+	for (i=0;i< tds.length; i++) tds[i].innerHTML = ""
 }
 </script>
