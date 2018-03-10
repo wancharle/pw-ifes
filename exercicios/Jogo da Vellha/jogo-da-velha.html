@@ -5,6 +5,8 @@
 	td { border: 1px solid black; width: 42px;height:42px;text-align:center;}
 	</style>
 </head>
+
+	<p style="color:red" id="mensagem"></p>
 <table>
 	<tr>
 		<td onclick='verificarCelula(this)'></td>
@@ -48,12 +50,17 @@ function verificarCelula (celula){
 		}
 	// senão
 	}else {
-		alert("a celulá esta cheia com esse caracter:'" + conteudo_celula + "'")
+		mensagem("a celulá esta cheia com esse caracter:'" + conteudo_celula + "'")
 	}
 }
 
 function reiniciarJogo(){
 	var tds = document.getElementsByTagName('td')
 	for (i=0;i< tds.length; i++) tds[i].innerHTML = ""
+}
+
+// função para exibir mensagem no html e não no alert
+function mensagem(texto){
+	document.getElementById("mensagem").innerHTML = texto;
 }
 </script>
