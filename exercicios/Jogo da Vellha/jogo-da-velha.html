@@ -48,6 +48,12 @@ function verificarCelula (celula){
 			celula.innerHTML = "0"
 			jogador = "X"
 		}
+		var vencedor = verificaVencedor()
+		if (vencedor!= "") { {
+				alert("vencedor: "+vencedor)
+				reiniciarJogo();
+			};
+		}
 	// senão
 	}else {
 		mensagem("a celulá esta cheia com esse caracter:'" + conteudo_celula + "'")
@@ -63,4 +69,41 @@ function reiniciarJogo(){
 function mensagem(texto){
 	document.getElementById("mensagem").innerHTML = texto;
 }
+
+
+var celulas;
+function verificaVencedor() {
+  // celulas html com os tds
+  celulas = document.getElementsByTagName('td');
+  
+  // linhas de possibilidades de ganhador
+  var linhas = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  
+  // testa para cada uma das possibilidades se existe ganhador
+  for (var i = 0; i < linhas.length; i++) {
+     var a = linhas[i][0];
+	 var b = linhas[i][1];
+	 var c = linhas[i][2];
+	 var cA = celulas[a].innerHTML;
+	 var cB = celulas[b].innerHTML;
+	 var cC = celulas[c].innerHTML;
+	 if (cA != "" && cA  == cB  && cA  == cC) {
+      return cA;
+    }
+  }
+  return "";
+}
+
+// reinicia o jogo ao carregar a pagina.
+reiniciarJogo();
+
 </script>
