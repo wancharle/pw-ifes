@@ -31,19 +31,6 @@
 <script>
 var jogador = "";
 // função que eh chamada quando clico numa celula da tabela
-function verificarCelula (celula){
-	// se a celula estiver fazia
-	
-	// faz pedido de marcação de celula no servidor
-	var body = document.getElementById("body")
-	// codigos para criar elemento <script src="pedido.js"><//script>
-	var novoScript = document.createElement("script")
-	novoScript.src="pedido.js"
-	body.appendChild(novoScript)
-		
-	// recebido a resposta do servidor atualiza o tabuleiro
-	atualizaTabuleiro()
-}
 
 function reiniciarJogo(){
 	var tds = document.getElementsByTagName('td')
@@ -74,6 +61,22 @@ function atualizaTabuleiro(){
 	tdsTabuleiro[6].innerHTML = celulas[2][0];
 	tdsTabuleiro[7].innerHTML = celulas[2][1];
 	tdsTabuleiro[8].innerHTML = celulas[2][2];
+}
+
+function verificarCelula (celula){
+	// se a celula estiver fazia
+	
+	// faz pedido de marcação de celula no servidor
+	var body = document.getElementById("body")
+	// codigos para criar elemento <script src="pedido.js"><//script>
+	var novoScript = document.createElement("script")
+	novoScript.setAttribute('src',"pedido.js")
+	// atualiza tabuleiro vai ser chamada pelo pedido apos carregamento
+	novoScript.onload = atualizaTabuleiro
+	body.appendChild(novoScript)
+		
+	// recebido a resposta do servidor atualiza o tabuleiro
+	
 }
 
 function verificaVencedor() {
