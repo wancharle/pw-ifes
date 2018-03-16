@@ -7,6 +7,7 @@
 </head>
 
 	<p style="color:red" id="mensagem"></p>
+	
 <table>
 	<tr>
 		<td onclick='verificarCelula(this)'></td>
@@ -32,32 +33,12 @@ var jogador = "";
 // função que eh chamada quando clico numa celula da tabela
 function verificarCelula (celula){
 	// se a celula estiver fazia
-	var conteudo_celula = celula.innerHTML;
 	
-	// limpando espaços
-	conteudo_celula = conteudo_celula.trim();
+	// faz pedido de marcação de celula no servidor
+	// ....codigo....
 	
-	// checko se a celula esta vazia
-	if (conteudo_celula == ""){
-		// se o jogador é o x
-		if (jogador == "X"){
-			celula.innerHTML = "X"
-			jogador = "0"
-		// senao
-		}else{
-			celula.innerHTML = "0"
-			jogador = "X"
-		}
-		var vencedor = verificaVencedor()
-		if (vencedor!= "") { {
-				alert("vencedor: "+vencedor)
-				reiniciarJogo();
-			};
-		}
-	// senão
-	}else {
-		mensagem("a celulá esta cheia com esse caracter:'" + conteudo_celula + "'")
-	}
+	// recebido a resposta do servidor atualiza o tabuleiro
+	atualizaTabuleiro()
 }
 
 function reiniciarJogo(){
@@ -70,11 +51,30 @@ function mensagem(texto){
 	document.getElementById("mensagem").innerHTML = texto;
 }
 
-
+// variavel global
 var celulas;
+
+function atualizaTabuleiro(){
+	// pega cada valor da variavel celula
+	// e coloca nos tds do tabuleiro
+	var tdsTabuleiro = document.getElementsByTagName('td');
+	// linha 1
+	tdsTabuleiro[0].innerHTML = celulas[0][0];
+	tdsTabuleiro[1].innerHTML = celulas[0][1];
+	tdsTabuleiro[2].innerHTML = celulas[0][2];
+	// linha 2
+	tdsTabuleiro[3].innerHTML = celulas[1][0];
+	tdsTabuleiro[4].innerHTML = celulas[1][1];
+	tdsTabuleiro[5].innerHTML = celulas[1][2];
+	// linha 3
+	tdsTabuleiro[6].innerHTML = celulas[2][0];
+	tdsTabuleiro[7].innerHTML = celulas[2][1];
+	tdsTabuleiro[8].innerHTML = celulas[2][2];
+}
+
 function verificaVencedor() {
   // celulas html com os tds
-  celulas = document.getElementsByTagName('td');
+ // celulas = document.getElementsByTagName('td');
   
   // linhas de possibilidades de ganhador
   var linhas = [
@@ -90,12 +90,13 @@ function verificaVencedor() {
   
   // testa para cada uma das possibilidades se existe ganhador
   for (var i = 0; i < linhas.length; i++) {
-     var a = linhas[i][0];
-	 var b = linhas[i][1];
-	 var c = linhas[i][2];
-	 var cA = celulas[a].innerHTML;
-	 var cB = celulas[b].innerHTML;
-	 var cC = celulas[c].innerHTML;
+	  var linha = linhas[i];
+     var a = linha[0];
+	 var b = linha[1];
+	 var c = linha[2];
+	 var cA = celulas[a];
+	 var cB = celulas[b];
+	 var cC = celulas[c];
 	 if (cA != "" && cA  == cB  && cA  == cC) {
       return cA;
     }
@@ -107,3 +108,5 @@ function verificaVencedor() {
 reiniciarJogo();
 
 </script>
+
+<script src="pedido.js" />
