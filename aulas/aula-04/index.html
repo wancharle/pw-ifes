@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Criação de elementos html por javascript</title>
+        <script></script>
+    </head>
+    <body>
+        <H1> Criação de elementos html por javascript </H1>
+        <p> Clique no botão abaixo para criar linhas e colunas na tabela abaixo</p>
+
+        <input type="button" onclick="adicionarLinhaColuna()" value="adicionar linha e coluna" />
+     
+        <table id="table">
+            <tr id="linha"></tr>
+        </table>
+
+        <script>
+            function adicionarLinhaColuna(){
+                var table = document.getElementById("table")
+
+                // criando nova linha
+                var novaLinha = document.createElement("tr")
+                
+                // criando nova coluna
+                var novaColuna = document.createElement("td")
+                novaColuna.innerHTML = "0"
+                novaColuna.style.border = "1px solid black"
+
+                var novaColuna2 = document.createElement("td")
+                novaColuna2.innerHTML = "X"
+                novaColuna2.style.border = "1px solid black"
+
+                var novaColuna3 = document.createElement("td")
+                novaColuna3.innerHTML = "0"
+                novaColuna3.style.border = "1px solid black"
+
+                // adicionando nova coluna na nova linha
+                novaLinha.appendChild(novaColuna)
+                novaLinha.appendChild(novaColuna2)
+                novaLinha.appendChild(novaColuna3)
+                
+                // adicionando nova linha na tabela
+                table.appendChild(novaLinha)
+            }
+        </script>
+
+        <h2> </h2>
+    </body>
+</html>

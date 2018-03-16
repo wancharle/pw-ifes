@@ -1,11 +1,11 @@
 <html>
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<style>
 	td { border: 1px solid black; width: 42px;height:42px;text-align:center;}
 	</style>
 </head>
-
+<body id="body">
 	<p style="color:red" id="mensagem"></p>
 	
 <table>
@@ -35,8 +35,12 @@ function verificarCelula (celula){
 	// se a celula estiver fazia
 	
 	// faz pedido de marcação de celula no servidor
-	// ....codigo....
-	
+	var body = document.getElementById("body")
+	// codigos para criar elemento <script src="pedido.js"><//script>
+	var novoScript = document.createElement("script")
+	novoScript.src="pedido.js"
+	body.appendChild(novoScript)
+		
 	// recebido a resposta do servidor atualiza o tabuleiro
 	atualizaTabuleiro()
 }
@@ -108,5 +112,5 @@ function verificaVencedor() {
 reiniciarJogo();
 
 </script>
+</body>
 
-<script src="pedido.js" ></script>
