@@ -1,0 +1,12 @@
+
+Exemplos de requisicoes
+
+POST http://localhost/dinamico/ola.class?safsad=klkkk HTTP/1.1
+content-type: application/json
+
+{
+    "name": "nome",
+    "time": "Wed, 21ct 2015 18:27:50 GMT"
+}
+
+
