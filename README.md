@@ -1,11 +1,7 @@
 # PW-IFES
 Material de apoio para disciplina de Programação Web do Instituto Federal do Espírito Santo - Campus Cachoeiro de Itapemirim
 
-## Aulas
-
-1. [Introdução](html-aula-01.md)
-2. [Javascript Output](js-aula-01.md)
-
+[Aulas](aulas/README.md)
 
 ## Listas de Leitura
 
