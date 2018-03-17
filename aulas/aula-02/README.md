@@ -7,15 +7,18 @@ Execute o arquivo servidor.py para ligar o servidor CGI para todos os arquivos p
 ## Acesse os arquivos pelo navegador e pelo telnet
 
 ## Ola.py
-Acessando ola.py pelo navegador(versão estatica e dinamica):
-
-![putty ola.py estatico](/aulas/img/putty-1.PNG)
-![putty ola.py dinamico](/aulas/img/putty-2.PNG)
-
-Acessando ola.py pelo telnet via puttytel (versão estatica e dinamica):
+Acesse ola.py pelo navegador(versão estatica e dinamica):
 
 ![firefox ola.py estatico](/aulas/img/putty-3.PNG)
 ![firefox ola.py dinamico](/aulas/img/putty-4.PNG)
+
+Observe que na versão estática o código não é executado e todo o conteúdo do arquivo é exibido.
+Porém, na versão dinâmica o código é executado e somente o que for impresso pelo program que será exibido na pagina.
+
+
+Acessando ola.py pelo telnet via puttytel (versão estatica e dinamica):
+![putty ola.py estatico](/aulas/img/putty-1.PNG)
+![putty ola.py dinamico](/aulas/img/putty-2.PNG)
 
 ## Ola.exe
 Acesse ola.exe pelo telnet via puttytel:
