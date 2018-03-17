@@ -2,8 +2,10 @@
 Material de apoio para disciplina de Programação Web do Instituto Federal do Espírito Santo - Campus Cachoeiro de Itapemirim
 
 ## Aulas
-Parte do conteúdo das aulas da disciplina pode ser acesso em [Aulas](aulas/README.md).
+Parte do conteúdo das aulas da disciplina pode ser acessado na pasta [aulas](aulas/README.md).
 
+## Exercícios e Projetos
+Alguns dos exercícios e projetos desenvolvidos em sala podem ser acessados na pasta [exercícios](exercicios/README.md)
 ## Listas de Leitura
 
 Abaixo segue algumas listas de leituras sobre programação WEB:
