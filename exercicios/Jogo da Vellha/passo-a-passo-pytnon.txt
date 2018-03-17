@@ -1,4 +1,4 @@
-PARTE 1 - Faça um programa python/java/c que leia 2 parametros da linha de comando(posicao e letra) e imprima uma matriz de acordo com os parametros passados
+PARTE 1 - Faça um programa python( ou java, ou c) que leia 2 parametros da linha de comando(posicao e letra) e imprima uma matriz de acordo com os parametros passados
 	
 	Por exemplo, o comando abaixo passa os parametros "1" e "x" para o script python: 
 	terminal> python jogar.py 1 X 
@@ -27,7 +27,18 @@ PARTE 1 - Faça um programa python/java/c que leia 2 parametros da linha de coman
 	]
 	terminal>
 
-PARTE 2 - Nesta parte, além de imprimir na tela a matrix, salve a matrix num arquivo chamado "bancoDeDados.txt"
+PARTE 2 - Nesta parte, além de imprimir na tela a matrix, salve a matrix num arquivo chamado "bancoDeDados.txt".
+
+	OBSERVAÇÃO: não é necessário salvar a matrix exatamente igual como ele eh exibida no terminal. 
+	No arquivo bancodedados.txt vc pode salvar a matrix da forma que achar melhor. Por exemplo, para algumas pessoas pode achar facil 
+	salvar a matrix na seguinte forma com apenas os valores separados por "virgulas" e as linhas por "\n":
+	
+	" "," "," "\n
+	" "," "," "\n
+	" "," "," "\n
+
+	Portanto, escolha o formato que funcione melhor para vc.
+
 
 PARTE 3 - Nesta parte, toda vez que o programa é executado ele faz o seguinte:
 	1- abre o arquivo bancodedados.txt
