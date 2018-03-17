@@ -63,19 +63,31 @@ function atualizaTabuleiro(){
 	tdsTabuleiro[8].innerHTML = celulas[2][2];
 }
 
+function recebiResposta(){
+    if (this.readyState == 4 && this.status == 200) {
+		// converte o texto do vetor para vetor de verdade
+		celulas = JSON.parse(this.responseText)
+		atualizaTabuleiro()
+	}
+}
+
 function verificarCelula (celula){
-	// se a celula estiver fazia
-	
 	// faz pedido de marcação de celula no servidor
-	var body = document.getElementById("body")
-	// codigos para criar elemento <script src="pedido.js"><//script>
-	var novoScript = document.createElement("script")
-	novoScript.setAttribute('src',"pedido.js")
-	// atualiza tabuleiro vai ser chamada pelo pedido apos carregamento
-	novoScript.onload = atualizaTabuleiro
-	body.appendChild(novoScript)
-		
-	// recebido a resposta do servidor atualiza o tabuleiro
+	// -- gambiarra com scripts --
+	//var body = document.getElementById("body")
+	//var novoScript = document.createElement("script")
+	//novoScript.setAttribute('src',"pedido.js")
+	//novoScript.onload = atualizaTabuleiro
+	//body.appendChild(novoScript)
+	// ---------------------------
+
+	// -- XML Request --
+	 var tempo = (new Date()).getTime()
+	 var firefox = new XMLHttpRequest();
+	 // chama funcao toda vez que muda o estado "pronto"/ ready state
+	 firefox.onreadystatechange = recebiResposta
+	 firefox.open("GET", "pedido.js?tempo="+tempo, true); // equivalente a digitar pedido.js na barra de enderco
+	 firefox.send(); // equivalente apertar o enter na barra de endereco
 	
 }
 
