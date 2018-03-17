@@ -1,12 +1,11 @@
 
-Exemplos de requisicoes
 
-POST http://localhost/dinamico/ola.class?safsad=klkkk HTTP/1.1
+POST http://localhost/ola.class?param1=value1&param2=value2 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "nome",
-    "time": "Wed, 21ct 2015 18:27:50 GMT"
+    "nome": "wancharle",
+    "data": "23/08/2018"
 }
 
 
