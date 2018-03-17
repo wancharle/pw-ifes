@@ -18,11 +18,17 @@ ___|__|___
     * Descobrir a vez do jogador: criar uma variavel 'jogador' que marque a letra do jogador atual.
 
 5. Verifique se tem ganhador 
+
    a. Verifique se o jogador X ganhou com estruturas ifs
+   
    b. Verifique se o jogador O ganhou com estruturas ifs
+   
    c. Verifique se ninguem ganhou ou que acabou o jogo.
 
 6. Adicionar Placar 
+
    a. Adicionar elemento HTML que exibe o placar (Jogador 'X' 4 x 5 Jogador Y)
+   
    b. Posicionar o placar no centro da pagina.
+   
    c. Controlar o placar.
