@@ -1,13 +1,14 @@
-﻿Jogo da Velha:
-1- monte uma tabela/div com 3x3 celulas.
+#Jogo da Velha:
+1 - monte uma tabela/div com 3x3 celulas.
 
 2- coloque bordas nas celulas/divs das tabelas para 
 a estrutura ficar igual ao jogo da velha original.
-
+``` 
 ___|__|___
 ___|__|___
    |  |
-   
+```
+
 3- quando clicar numa celula/div, mostre um alerta com o 
 conteúdo dela('0' ou 'X')
 
