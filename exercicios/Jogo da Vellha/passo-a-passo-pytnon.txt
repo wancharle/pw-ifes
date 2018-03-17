@@ -1,0 +1,69 @@
+PARTE 1 - Faça um programa python/java/c que leia 2 parametros da linha de comando(posicao e letra) e imprima uma matriz de acordo com os parametros passados
+	
+	Por exemplo, o comando abaixo passa os parametros "1" e "x" para o script python: 
+	terminal> python jogar.py 1 X 
+ 	[ 
+		[" ", "X", " " ],
+		[" ", " ", " " ],
+		[" ", " ", " " ]
+	]
+	terminal>
+
+	Por exemplo, o comando abaixo passa os parametros "3" e "0" para o script python: 
+	terminal> python jogar.py 3 0
+ 	[ 
+		[" ", " ", " " ],
+		["0", " ", " " ],
+		[" ", " ", " " ]
+	]
+	terminal>
+
+	Por exemplo, o comando abaixo passa os parametros "8" e "x" para o script python: 
+	terminal> python jogar.py 8 X 
+ 	[ 
+		[" ", " ", " " ],
+		[" ", " ", " " ],
+		[" ", " ", "X" ]
+	]
+	terminal>
+
+PARTE 2 - Nesta parte, além de imprimir na tela a matrix, salve a matrix num arquivo chamado "bancoDeDados.txt"
+
+PARTE 3 - Nesta parte, toda vez que o programa é executado ele faz o seguinte:
+	1- abre o arquivo bancodedados.txt
+	2- coloca o conteudo do arquivo numa matrix na memoria
+	3- altera alguma linha/coluna da matrix para marcar a letra na posicao passada como parametro pela linha de comando
+	4- imprime a matrix na tela
+	5- salva a matrix como texto no arquivo bancodedados.txt
+
+	A execução sequencial do comando nessa parte pode gerar o seguinte resultado:
+	primeiro passando os parametros "1" e "x" para o script python: 
+	terminal> python jogar.py 1 X 
+ 	[ 
+		[" ", "X", " " ],
+		[" ", " ", " " ],
+		[" ", " ", " " ]
+	]
+	terminal>
+
+	em seguida, passando os parametros "3" e "0" para o script python: 
+	terminal> python jogar.py 3 0 
+ 	[ 
+		[" ", "X", " " ],
+		["0", " ", " " ],
+		[" ", " ", " " ]
+	]
+	terminal>
+
+	Por exemplo, o comando abaixo passa os parametros "8" e "x" para o script python: 
+	terminal> python jogar.py 8 X 
+ 	[ 
+		[" ", "X", " " ],
+		["0", " ", " " ],
+		[" ", " ", "X" ]
+	]
+	terminal>
+
+
+
+
