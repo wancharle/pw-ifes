@@ -86,7 +86,7 @@ function verificarCelula (celula){
 	 var firefox = new XMLHttpRequest();
 	 // chama funcao toda vez que muda o estado "pronto"/ ready state
 	 firefox.onreadystatechange = recebiResposta
-	 firefox.open("GET", "pedido.js?tempo="+tempo, true); // equivalente a digitar pedido.js na barra de enderco
+	 firefox.open("GET", "dinamico/pedido.bat?tempo="+tempo, true); // equivalente a digitar pedido.js na barra de enderco
 	 firefox.send(); // equivalente apertar o enter na barra de endereco
 	
 }
