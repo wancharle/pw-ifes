@@ -18,12 +18,19 @@ Acessando ola.py pelo telnet via puttytel (versão estatica e dinamica):
 ![firefox ola.py dinamico](/aulas/img/putty-4.PNG)
 
 ## Ola.exe
-Acessando ola.exe pelo telnet via puttytel (versão estatica e dinamica):
+Acesse ola.exe pelo telnet via puttytel:
 
 ![a](/aulas/img/putty-5.PNG)
+
+Na versão estatica acima o telnet exibe os caracteres binarios, num navegador ele exibiria o download do arquivo.
+
 ![a](/aulas/img/putty-6.PNG)
 
-Acessando ola.exe, com pausa durante a requisicao,  pelo telnet via puttytel:
+Na versão dinamica acima o ola.exe é executa e só o que esse programa imprimir que será exibido.
+
+## Ola.exe com pausa para processamento de informação
+
+Acesse ola.exe, com pausa durante a requisicao,  pelo telnet via puttytel:
 
 ![a](/aulas/img/putty-7.PNG)
 
@@ -31,6 +38,3 @@ Observe a pausa ocorrida acima e que só apos alguns segundos o programa devolve
 
 ![a](/aulas/img/putty-8.PNG)
 
-
-![a](/aulas/img/putty-9.PNG)
-![a](/aulas/img/putty-10.PNG)
