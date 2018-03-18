@@ -36,15 +36,17 @@ Na versão estatica acima o telnet exibe os caracteres binarios, num navegador e
 
 ![a](/aulas/img/putty-6.PNG)
 
-Na versão dinamica acima o ola.exe é executa e só o que esse programa imprimir que será exibido.
+Na versão dinamica acima o ola.exe é executado. E só o que esse programa imprimir que será exibido.
 
 ### Ola.exe com pausa para processamento de informação
 
-Acesse ola.exe, com pausa durante a requisicao,  pelo telnet via puttytel:
+Acesse ola-com-pausa.exe pelo telnet via puttytel:
 
 ![a](/aulas/img/putty-7.PNG)
 
-Observe a pausa ocorrida acima e que só apos alguns segundos o programa devolve a resposta como abaixo:
+Observe a pausa ocorrida acima. Só apos alguns segundos o programa devolve a resposta como na tela abaixo:
 
 ![a](/aulas/img/putty-8.PNG)
+
+Essa pausa foi simulada pelo programa. Mas equivale ao tempo gasto pelo seu programa para processar alguma operação. Por exemplo, ele pode gastar esse tempo acessando o banco de dados, enviando um email, recebendo o upload de uma foto etc.
 
