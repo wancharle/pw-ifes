@@ -3,7 +3,7 @@
 ## Iniciando servidor cgi
 
 Dê dois cliques no arquivo servidor-java.py para iniciar o servidor cgi com suporte a java.
-![executanto servidor](/aulas/img/java1.PNG)
+![executanto servidor](/aulas/img/java-1.PNG)
 
 ## Acesse o site
 
