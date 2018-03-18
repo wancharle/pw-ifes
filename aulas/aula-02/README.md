@@ -19,7 +19,7 @@ Isso acontece porque existe uma distinção feita pelo servidor web relacionada 
 
 1. **Requisições estáticas**: são pedidos para **baixar** arquivos. E pode ser qualquer arquivo tanto os mais comuns(pdf, img, docx, videos etc) e até arquivos binários(.exe, .bin) ou de códigos de linguagens desktop ou web(.py,.php) que não  serão executados.
 
-2. **Requisições dinãmicas**: são pedidos para **executar** "programas" no computador onde esta instalado o servidor. Neste caso, o servidor web(Apache, Nginx, IIS etc) não transfere o arquivo do programa pedido(nem os binários e nem os codigos). O servidor apenas executa o programa e envia somente a saída impressa pela execução do programa. (ou seja, manda para o usario apenas o que o programa imprimiu na tela)
+2. **Requisições dinãmicas**: são pedidos para **executar** "programas" no computador onde esta instalado o servidor. Neste caso, o servidor web(Apache, Nginx, IIS etc) não transfere o arquivo do programa pedido(nem os binários e nem os codigos). O servidor apenas executa o programa e envia somente a saída impressa pela execução do programa. (ou seja, manda para o usuário apenas o que o programa imprimiu na tela)
 
 Essa diferença de comportamento ocorre a nível de rede via protocolo HTTP. Portanto, não importa a linguagem de programação que vc esteja utilize, nem o navegador (firefox, IE ou chrome), nem o servidor web (Apache, IIS, ou NGINX), nem o sistema operacional (Windows, Linux, MacOS). Toda a internet e web funciona obedecendo esse protocolo HTTP. E isso pode ser testado, por exemplo,  verificando o acesso de uma pagina via telnet sem utilizar um navegador web:
 
