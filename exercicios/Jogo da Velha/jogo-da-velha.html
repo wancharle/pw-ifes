@@ -6,7 +6,15 @@
 	</style>
 </head>
 <body id="body">
-	<p style="color:red" id="mensagem"></p>
+	<div style="width:150px;margin:0 auto;">
+	<label>Escolha o seu Jogador:</labe>
+	<select id="selectBox">
+		<option value="X">Jogador X</option>
+		<option value="O">Jogador O</option>
+		<option value=" ">limpar</option>
+	</select>
+	<br/>
+	<br/>
 	
 <table>
 	<tr>
@@ -27,19 +35,18 @@
 </table>
 
 <a href="#" onclick="reiniciarJogo()">Reiniciar jogo</a>
-
+</DIV>
 <script>
-var jogador = "";
 // função que eh chamada quando clico numa celula da tabela
 
 function reiniciarJogo(){
-	var tds = document.getElementsByTagName('td')
-	for (i=0;i< tds.length; i++) tds[i].innerHTML = ""
-}
-
-// função para exibir mensagem no html e não no alert
-function mensagem(texto){
-	document.getElementById("mensagem").innerHTML = texto;
+	var firefox = new XMLHttpRequest()
+	firefox.onreadystatechange = recebiResposta
+	firefox.open("GET", "dinamico/reiniciar.bat?tempo="+(new Date()).getTime(), true);
+	firefox.send() 
+	
+	// cria um timeout para chamar a função verifica vencedor apos 1s
+	setTimeout('verificaVencedor()',1000);
 }
 
 // variavel global
@@ -71,24 +78,17 @@ function recebiResposta(){
 	}
 }
 
-function verificarCelula (celula){
-
-	// -- XML Request --
-	 var tempo = (new Date()).getTime()
-	 var firefox = new XMLHttpRequest();
-	 // chama funcao toda vez que muda o estado "pronto"/ ready state
-	 firefox.onreadystatechange = recebiResposta
-	 firefox.open("GET", "dinamico/jogar.exe?letra=x"&posicao="+posicao+"&tempo="+tempo, true); // equivalente a digitar pedido.js na barra de enderco
-	 firefox.send(); // equivalente apertar o enter na barra de endereco
-	
+function verificarCelula (celula,posicao){
+	var letra = selectBox.value 
+	var firefox = new XMLHttpRequest()
+	firefox.onreadystatechange = recebiResposta
+	firefox.open("GET", "dinamico/jogar.exe?letra="+letra+"&posicao="+posicao+"&tempo="+(new Date()).getTime(), true);
+	firefox.send() // equivalente apertar o enter na barra de endereco
 }
 
 function verificaVencedor() {
-  // celulas html com os tds
- // celulas = document.getElementsByTagName('td');
-  
-  // linhas de possibilidades de ganhador
-  var linhas = [
+	var tds= document.getElementsByTagName('td')
+    var linhas = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -97,7 +97,7 @@ function verificaVencedor() {
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-  ];
+  	];
   
   // testa para cada uma das possibilidades se existe ganhador
   for (var i = 0; i < linhas.length; i++) {
@@ -105,14 +105,17 @@ function verificaVencedor() {
      var a = linha[0];
 	 var b = linha[1];
 	 var c = linha[2];
-	 var cA = celulas[a];
-	 var cB = celulas[b];
-	 var cC = celulas[c];
-	 if (cA != "" && cA  == cB  && cA  == cC) {
-      return cA;
+	 var cA = tds[a].innerHTML;
+	 var cB = tds[b].innerHTML;
+	 var cC = tds[c].innerHTML;
+	 if (cA != " " && cA  == cB  && cA  == cC) {
+      alert("Jogador "+ cA + " ganhou!")
+	  reiniciarJogo()
+	  return;
     }
   }
-  return "";
+  // cria um timeout para chamar a função verifica vencedor a cada 1s
+  setTimeout('verificaVencedor()',1000);
 }
 
 // reinicia o jogo ao carregar a pagina.
@@ -120,4 +123,4 @@ reiniciarJogo();
 
 </script>
 </body>
-
+</html>

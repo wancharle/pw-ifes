@@ -1,11 +1,10 @@
-//#include <locale.h>
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "cgi.h"
  
 // -----------------------------------------------------------------------------
 char celulas[3][3];
-
 
 // -----------------------------------------------------------------------------
 void inicializaTabuleiroVazio(){
@@ -29,14 +28,13 @@ void carregaTabuleiroDoBancoParaMemoria(){
     } else{ 
        rewind(f);
        // le os dados do arquivo e inicializa o tabuleiro com esses dados
-       fscanf(f,"%c,%c,%c|",&celulas[0][0],&celulas[0][1],&celulas[0][2]);
-       fscanf(f,"%c,%c,%c|",&celulas[1][0],&celulas[1][1],&celulas[1][2]);
-       fscanf(f,"%c,%c,%c",&celulas[2][0],&celulas[2][1],&celulas[2][2]);
+       fscanf(f,"%c%c%c",&celulas[0][0],&celulas[0][1],&celulas[0][2]);
+       fscanf(f,"%c%c%c",&celulas[1][0],&celulas[1][1],&celulas[1][2]);
+       fscanf(f,"%c%c%c",&celulas[2][0],&celulas[2][1],&celulas[2][2]);
     }
      // fecha o arquivo     
     fclose(f);     
 }
-
 
 // -----------------------------------------------------------------------------
 void salvaTabuleiroNoBanco(){
@@ -49,9 +47,9 @@ void salvaTabuleiroNoBanco(){
     
     int l,c;
     // imprime os dados no arquivo
-    fprintf(f,"%c,%c,%c|",celulas[0][0],celulas[0][1],celulas[0][2]);
-    fprintf(f,"%c,%c,%c|",celulas[1][0],celulas[1][1],celulas[1][2]);
-    fprintf(f,"%c,%c,%c",celulas[2][0],celulas[2][1],celulas[2][2]);
+    fprintf(f,"%c%c%c",celulas[0][0],celulas[0][1],celulas[0][2]);
+    fprintf(f,"%c%c%c",celulas[1][0],celulas[1][1],celulas[1][2]);
+    fprintf(f,"%c%c%c",celulas[2][0],celulas[2][1],celulas[2][2]);
 
     // fecha e salva no hd    
     fclose(f);     
@@ -93,60 +91,47 @@ void imprimeTabuleiro(){
   }
   printf("\n]");  
 }
-
+// -----------------------------------------------------------------------------
 void printErro400(){
-    //printf("Status: 400 Bad Request\r\n\r\n");
-    printf("Content-Type: text/html\r\n\r\n");
+    printf("Status: 400 Bad Request\n");
+    printf("Content-type: application/json\n\n");
 }
-
 void printOk(){
-//    printf("Status: 200 OK\r\n\r\n"); ]
-      printf("Content-type: text/plain\n\n");
+    printf("Status: 200 OK\n");
+    printf("Content-type: application/json\n\n");
 }
 
 // -----------------------------------------------------------------------------
 int main(int argc, char *argv[])
 {
-  int posicao;
-  char letra;
-  // para permitir acentos
-  //setlocale(LC_ALL,"Portuguese");
-
+  setlocale(LC_ALL,"Portuguese");
+  char letra[100] = "";
+  char posicao[100] = "";
+  int numeroPosicao;
+    
   carregaTabuleiroDoBancoParaMemoria();
   
-  char *querystring = getenv("QUERY_STRING");
-  char cc[2];
-  letra = querystring[6];
-  cc[0]=querystring[16];
-  cc[1]=0;
-  posicao = atoi(cc);
-  //printf("%d,%c",posicao,cc);
-  //sscanf("?letra=%c&posicao=%c",letra2,posicao2);
-  //printf("%s|%c|%c",querystring,,querystring[17]);
-  // checando o numero de parametros
-  /*if (argc != 3){
-    printErro400();
-    printf("ERROR: número de parametros errado! Foi fornecido %d parametros!\n");
-    printf("Informe dois parametros da seguinte forma:\n\nTERMINAL> jogar.exe  <letra> <posicao>\n\n",argc);	
-    return 1;
-  }
+  // ler parametros
+  getAllParams();
+  getParam("letra", letra);
+  getParam("posicao", posicao);
   
-  // obtendo os parametros
-  letra = toupper(argv[1][0]);
-  posicao = atoi(argv[2]);
-  if (letra != 'X' && letra!= 'O'){
-    printErro400();
-    printf("ERROR: letra incorreta!\nInforme apenas as letras 'X' ou 'O' !\n\n");            
-    return 2;
+  // converte  e checka parametros
+  numeroPosicao = atoi(posicao); // converte para inteiro
+  if (posicao[0] != '0' && numeroPosicao==0){
+     printErro400();
+     printf("{ \"erro\": \"Voce deve informar um numero de 0 a 8 no parametro posicao!\"}");
+     return 400;
   }
- 
-  if (posicao < 0 || posicao > 8){
-    printErro400();
-    printf("ERROR: posição incorreta!\nInforme apenas numeros de '0' a '8' !\n\n");            
-    return 3;
-  }*/
+  if (numeroPosicao < 0 || numeroPosicao > 8){
+     printErro400();
+     printf("{ \"erro\": \"Voce deve informar um numero de 0 a 8 no parametro posicao!\"}");
+     return 400;
+  }
+
+  // imprime o resultado
   printOk();
-  marcaTabuleiro(letra,posicao);
+  marcaTabuleiro(letra[0],atoi(posicao));
   imprimeTabuleiro();
   salvaTabuleiroNoBanco();
   
