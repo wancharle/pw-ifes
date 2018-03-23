@@ -10,19 +10,19 @@
 	
 <table>
 	<tr>
-		<td onclick='verificarCelula(this)'></td>
-		<td onclick='verificarCelula(this)'>a</td>
-		<td onclick='verificarCelula(this)'></td>
+		<td onclick='verificarCelula(this,0)'></td>
+		<td onclick='verificarCelula(this,1)'>a</td>
+		<td onclick='verificarCelula(this,2)'></td>
 	</tr>
 	<tr>
-		<td onclick='verificarCelula(this)'></td>
-		<td onclick='verificarCelula(this)'>5</td>
-		<td onclick='verificarCelula(this)'></td>
+		<td onclick='verificarCelula(this,3)'></td>
+		<td onclick='verificarCelula(this,4)'>5</td>
+		<td onclick='verificarCelula(this,5)'></td>
 	</tr>
 	<tr>
-		<td onclick='verificarCelula(this)'>2</td>
-		<td onclick='verificarCelula(this)'>      </td>
-		<td onclick="verificarCelula(this)">4</td>
+		<td onclick='verificarCelula(this,6)'>2</td>
+		<td onclick='verificarCelula(this,7)'>      </td>
+		<td onclick="verificarCelula(this,8)">4</td>
 	</tr>
 </table>
 
@@ -72,21 +72,13 @@ function recebiResposta(){
 }
 
 function verificarCelula (celula){
-	// faz pedido de marcação de celula no servidor
-	// -- gambiarra com scripts --
-	//var body = document.getElementById("body")
-	//var novoScript = document.createElement("script")
-	//novoScript.setAttribute('src',"pedido.js")
-	//novoScript.onload = atualizaTabuleiro
-	//body.appendChild(novoScript)
-	// ---------------------------
 
 	// -- XML Request --
 	 var tempo = (new Date()).getTime()
 	 var firefox = new XMLHttpRequest();
 	 // chama funcao toda vez que muda o estado "pronto"/ ready state
 	 firefox.onreadystatechange = recebiResposta
-	 firefox.open("GET", "dinamico/pedido.bat?tempo="+tempo, true); // equivalente a digitar pedido.js na barra de enderco
+	 firefox.open("GET", "dinamico/jogar.exe?letra=x"&posicao="+posicao+"&tempo="+tempo, true); // equivalente a digitar pedido.js na barra de enderco
 	 firefox.send(); // equivalente apertar o enter na barra de endereco
 	
 }

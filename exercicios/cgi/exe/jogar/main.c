@@ -1,4 +1,4 @@
-#include <locale.h>
+//#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,7 +12,7 @@ void inicializaTabuleiroVazio(){
   int l,c;
   for(l=0; l<3;l++){
      for(c=0; c<3;c++){
-         celulas[l][c]=" ";
+         celulas[l][c]=' ';
       }
   }
 } 
@@ -91,9 +91,18 @@ void imprimeTabuleiro(){
      printf("]");
      if (l<2) printf(",\n");
   }
-  printf("\n]\n");  
+  printf("\n]");  
 }
 
+void printErro400(){
+    //printf("Status: 400 Bad Request\r\n\r\n");
+    printf("Content-Type: text/html\r\n\r\n");
+}
+
+void printOk(){
+//    printf("Status: 200 OK\r\n\r\n"); ]
+      printf("Content-type: text/plain\n\n");
+}
 
 // -----------------------------------------------------------------------------
 int main(int argc, char *argv[])
@@ -101,14 +110,24 @@ int main(int argc, char *argv[])
   int posicao;
   char letra;
   // para permitir acentos
-  setlocale(LC_ALL,"Portuguese");
-  
+  //setlocale(LC_ALL,"Portuguese");
+
   carregaTabuleiroDoBancoParaMemoria();
+  
+  char *querystring = getenv("QUERY_STRING");
+  char cc[2];
+  letra = querystring[6];
+  cc[0]=querystring[16];
+  cc[1]=0;
+  posicao = atoi(cc);
+  //printf("%d,%c",posicao,cc);
+  //sscanf("?letra=%c&posicao=%c",letra2,posicao2);
+  //printf("%s|%c|%c",querystring,,querystring[17]);
   // checando o numero de parametros
-  if (argc != 3){
+  /*if (argc != 3){
+    printErro400();
     printf("ERROR: número de parametros errado! Foi fornecido %d parametros!\n");
-    printf("Informe dois parametros da seguinte forma:\n\nTERMINAL> jogar.exe  <letra> <posicao>\n\n",argc);
-    system("PAUSE");	
+    printf("Informe dois parametros da seguinte forma:\n\nTERMINAL> jogar.exe  <letra> <posicao>\n\n",argc);	
     return 1;
   }
   
@@ -116,21 +135,20 @@ int main(int argc, char *argv[])
   letra = toupper(argv[1][0]);
   posicao = atoi(argv[2]);
   if (letra != 'X' && letra!= 'O'){
+    printErro400();
     printf("ERROR: letra incorreta!\nInforme apenas as letras 'X' ou 'O' !\n\n");            
-    system("PAUSE");	
     return 2;
   }
  
   if (posicao < 0 || posicao > 8){
+    printErro400();
     printf("ERROR: posição incorreta!\nInforme apenas numeros de '0' a '8' !\n\n");            
-    system("PAUSE");	
     return 3;
-  }
-  
+  }*/
+  printOk();
   marcaTabuleiro(letra,posicao);
   imprimeTabuleiro();
   salvaTabuleiroNoBanco();
   
-  system("PAUSE");	
   return 0;
 }
