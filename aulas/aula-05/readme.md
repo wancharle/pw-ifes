@@ -1,6 +1,6 @@
 # Aula 5 - Formulários
 
-Nesta aula vc ficará sabendo tudo que precisa saber sobre formulários na internet.
+Nesta aula será apresentado como manipular formulários html.
 
 ## Formulários em HTML
 O formulário é o meio que permite criar mais interatividade entre a programação e o usuário.
@@ -20,7 +20,7 @@ Um formulário é representado no HTML através da tag **\<form>**. Um formulár
 | \<button> | Define um botão
 
 
-Os formulários fazem parte do código html, portanto devem ser definidos como as tags dessa linguagem. Ou seja, sempre com uma tag de abertura (\<form>) e outra de fechamento (\</form>).  O conteúdo do formulário(elementos/campos de captura de dados) deve ser inserido entre entre essas duas tags, como demostra o exemplo a seguir.
+Os formulários fazem parte do código html, portanto devem ser definidos como as tags dessa linguagem. Ou seja, sempre com uma tag de abertura (\<form>) e outra de fechamento (\</form>).  O conteúdo do formulário(elementos/campos de captura de dados) deve ser inserido entre essas duas tags, como demostra o exemplo a seguir.
 
 ### Exemplo
 
