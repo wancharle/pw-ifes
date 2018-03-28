@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/></head>
+<body>
+
+<h2>Formulários HTML</h2>
+
+<form action="/actions/exemplo-2.py" method="GET">
+  <p>Campo texto:<input type="text" name="campo_texto"></p>
+  <p>Campo senha:<input type="password" value="123" name="campo_senha"></p>
+  <p>Campo radio:
+   <input type="radio" name="campo_radio" value="sim" checked> sim
+   <input type="radio" name="campo_radio" value="nao"> não
+   <input type="radio" name="campo_radio" value="outro"> outro
+  </p>
+ 
+ <p>Campo checkbox: 
+ <input type="checkbox" name="campo_checkbox" value="marcado"> </p>
+  
+ <p>Campo select carro: 
+   <select name="campo_select">
+    <option value="volvo">Volvo</option>
+    <option value="Saab">Saab</option>
+    <option value="Fiat">Fiat</option>
+    <option value="Audi">Audi</option>
+   </select> 
+ </p>
+<p><input type="submit" value="enviar"></p>
+</form>
+<p>Se vc clicar no botão "enviar", os dados do formulário serão enviados para a página "/actions/exemplo-2.py".</p>
+
+</body>
+</html>

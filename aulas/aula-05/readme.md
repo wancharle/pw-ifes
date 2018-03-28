@@ -22,7 +22,7 @@ Um formulário é representado no HTML através da tag **\<form>**. Um formulár
 
 Os formulários fazem parte do código html, portanto devem ser definidos como as tags dessa linguagem. Ou seja, sempre com uma tag de abertura (\<form>) e outra de fechamento (\</form>).  O conteúdo do formulário(elementos/campos de captura de dados) deve ser inserido entre entre essas duas tags, como demostra o exemplo a seguir.
 
-### Exemplo 1
+### Exemplo
 
 Nesse exemplo, temos 1 formulário que possui 3 campos (2 de texto e 1 botão) cujos dados são enviados para a página "exemplo-1.py" quando o usuário clica no botao enviar.
 
@@ -92,4 +92,77 @@ Faça um teste:
 2. Acesse http://localhost/exemplo-1.html e envie o formulário. 
 
 Com o teste acima percebemos que os dados continuam sendo enviados, porém eles não são exibidos na URL. 
+
+## Processando formulários
+
+Para processar os dados de um formulário é necessário que cada campo tenha um atributo **name**, pois para acessar os dados informados no no fomulário a linguagem de script do lado servidor precisa saber de qual campo estamos nos referindo.
+
+### Exemplo 
+
+O exemplo a seguir exibe um formulário cheio de campos dos mais diversos tipos. Observe que todos possuem um atributo **name**.
+
+```html
+<form action="/actions/exemplo-2.py" method="GET">
+  <p>Campo texto:<input type="text" name="campo_texto"></p>
+  <p>Campo senha:<input type="password" value="123" name="campo_senha"></p>
+  <p>Campo radio:
+   <input type="radio" name="campo_radio" value="sim" checked> sim
+   <input type="radio" name="campo_radio" value="nao"> não
+   <input type="radio" name="campo_radio" value="outro"> outro
+  </p>
+ 
+ <p>Campo checkbox: 
+ <input type="checkbox" name="campo_checkbox" value="marcado"> </p>
+  
+ <p>Campo select carro: 
+   <select name="campo_select">
+    <option value="volvo">Volvo</option>
+    <option value="Saab">Saab</option>
+    <option value="Fiat">Fiat</option>
+    <option value="Audi">Audi</option>
+   </select> 
+ </p>
+<p><input type="submit" value="enviar"></p>
+</form>
+```
+
+Os dados do formulário acima podem ser acessados após envio pela pagina "exemplo-2.py" que simplismente os imprime. Segue o código da pagina:
+
+```python
+# -*- coding: utf-8 -*-
+import cgi, cgitb
+
+# coleta informações sobre os dados do formulário
+form = cgi.FieldStorage() 
+texto = form.getvalue('campo_texto')
+senha = form.getvalue('campo_senha')
+radio = form.getvalue('campo_radio')
+checkbox = "sim" if form.getvalue('campo_checkbox') == "marcado" else "não"
+carro = form.getvalue('campo_select')
+
+# imprime cabeçalho padrão
+print("Content-type: text/html; charset=utf-8;\n\n")
+
+# imprime a reposta
+template_html = """
+<h1>Dados enviados</h1>
+<p>Texto: %s <p>
+<p>Senha: %s </p>
+<p>Radio selecionado: %s </p>
+<p>Checkbox marcado?: %s</p>
+<p>Carro selecionado: %s </p>
+ """ % (texto, senha, radio, checkbox, carro)
+print(template_html)
+```
+
+Como pode-se observar para acessar os dados de um campo basta chamar a função **.getvalue("\<name do campo>")** do objeto formulário form.
+
+Para testar esse exemplo faça o seguinte:
+1. Inicie o servidor http cliando no arquivo "servidor.py" (caso ainda não esteja iniciado)
+2. Abra o endereço http://localhost/exemplo-2.html no seu navegador preferido.
+
+
+# Envio de arquivos
+
+
 
