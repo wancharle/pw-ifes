@@ -24,7 +24,7 @@ Os formulários fazem parte do código html, portanto devem ser definidos como a
 
 ### Exemplo
 
-Nesse exemplo, temos 1 formulário que possui 3 campos (2 de texto e 1 botão) cujos dados são enviados para a página "exemplo-1.py" quando o usuário clica no botao enviar.
+Neste exemplo, temos 1 formulário que possui 3 campos (2 de texto e 1 botão) cujos dados são enviados para a página "exemplo-1.py" quando o usuário clica no botao enviar.
 
 ```html
 <form action="/actions/exemplo-1.py" method="GET">
@@ -50,7 +50,7 @@ Normalmente, os dados do formulário são enviados para uma página da Web no se
 
 No exemplo acima, os dados do formulário são enviados para uma página no servidor chamada "/exemplo-1.py". Esta página contém um script do lado do servidor que manipula os dados do formulários.
 
-Observação: Se o atributo **action** não for informado pelo programado, a ação destino passa a ser a própria pagina.
+Observação: Se o atributo **action** não for informado pelo programador, a action de destino passa a ser a própria pagina.
 
 ### O atributo target
 
@@ -126,7 +126,7 @@ O exemplo a seguir exibe um formulário cheio de campos dos mais diversos tipos.
 </form>
 ```
 
-Os dados do formulário acima podem ser acessados após envio pela pagina "exemplo-2.py" que simplismente os imprime. Segue o código da pagina:
+Os dados do formulário acima podem ser acessados após envio pela pagina "exemplo-2.py" que simplesmente os imprime. Segue o código da pagina:
 
 ```python
 # -*- coding: utf-8 -*-
@@ -155,7 +155,7 @@ template_html = """
 print(template_html)
 ```
 
-Como pode-se observar para acessar os dados de um campo basta chamar a função **.getvalue("\<name do campo>")** do objeto formulário form.
+Podemos observar que para acessar os dados de um campo basta chamar a função **.getvalue("\<name do campo>")** do objeto formulário form.
 
 Para testar esse exemplo faça o seguinte:
 1. Inicie o servidor http cliando no arquivo "servidor.py" (caso ainda não esteja iniciado)
