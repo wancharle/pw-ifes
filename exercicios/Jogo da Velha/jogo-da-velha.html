@@ -19,18 +19,18 @@
 <table>
 	<tr>
 		<td onclick='verificarCelula(this,0)'></td>
-		<td onclick='verificarCelula(this,1)'>a</td>
+		<td onclick='verificarCelula(this,1)'></td>
 		<td onclick='verificarCelula(this,2)'></td>
 	</tr>
 	<tr>
 		<td onclick='verificarCelula(this,3)'></td>
-		<td onclick='verificarCelula(this,4)'>5</td>
+		<td onclick='verificarCelula(this,4)'></td>
 		<td onclick='verificarCelula(this,5)'></td>
 	</tr>
 	<tr>
-		<td onclick='verificarCelula(this,6)'>2</td>
-		<td onclick='verificarCelula(this,7)'>      </td>
-		<td onclick="verificarCelula(this,8)">4</td>
+		<td onclick='verificarCelula(this,6)'></td>
+		<td onclick='verificarCelula(this,7)'></td>
+		<td onclick="verificarCelula(this,8)"></td>
 	</tr>
 </table>
 
@@ -38,6 +38,16 @@
 </DIV>
 <script>
 // função que eh chamada quando clico numa celula da tabela
+
+function atualizaJogo(){
+	var firefox = new XMLHttpRequest()
+	firefox.onreadystatechange = recebiResposta
+	firefox.open("GET", "dinamico/atualiza.py?tempo="+(new Date()).getTime(), true);
+	firefox.send() 
+	
+	// programa a função para se auto-executar a cada 1000 milisegundos(1segundo)
+	setTimeout('atualizaJogo()',1000);
+}
 
 function reiniciarJogo(){
 	var firefox = new XMLHttpRequest()
@@ -47,6 +57,14 @@ function reiniciarJogo(){
 	
 	// cria um timeout para chamar a função verifica vencedor apos 1s
 	setTimeout('verificaVencedor()',1000);
+}
+
+function verificarCelula (celula,posicao){
+	var letra = selectBox.value 
+	var firefox = new XMLHttpRequest()
+	firefox.onreadystatechange = recebiResposta
+	firefox.open("GET", "dinamico/jogar.exe?letra="+letra+"&posicao="+posicao+"&tempo="+(new Date()).getTime(), true);
+	firefox.send() // equivalente apertar o enter na barra de endereco
 }
 
 // variavel global
@@ -78,13 +96,7 @@ function recebiResposta(){
 	}
 }
 
-function verificarCelula (celula,posicao){
-	var letra = selectBox.value 
-	var firefox = new XMLHttpRequest()
-	firefox.onreadystatechange = recebiResposta
-	firefox.open("GET", "dinamico/jogar.exe?letra="+letra+"&posicao="+posicao+"&tempo="+(new Date()).getTime(), true);
-	firefox.send() // equivalente apertar o enter na barra de endereco
-}
+
 
 function verificaVencedor() {
 	var tds= document.getElementsByTagName('td')
@@ -118,8 +130,8 @@ function verificaVencedor() {
   setTimeout('verificaVencedor()',1000);
 }
 
-// reinicia o jogo ao carregar a pagina.
-reiniciarJogo();
+
+atualizaJogo();
 
 </script>
 </body>
