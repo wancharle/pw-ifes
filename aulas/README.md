@@ -3,6 +3,7 @@
 1. [Introdução](html-aula-01.md)
 2. [Javascript Output](js-aula-01.md)
 3. [Processamento de Formulários](aula-05)
+4. [Introdução ao framework Flask](aula-06)
 
 
 ## Listas de Leitura
