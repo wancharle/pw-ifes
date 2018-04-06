@@ -40,7 +40,7 @@ Instale o Flask no ambiente virtual digitando o comando:
 ```
 pip install flask
 ```
-
+![instalando flask](../img/VSCODE1.PNG)
 Crie um arquivo "app.py" com o seguinte conteudo:
 ```python
 from flask import Flask
