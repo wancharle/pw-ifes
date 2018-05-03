@@ -25,5 +25,5 @@ RUN pip install pylint
 
 WORKDIR /home/user
 USER user
-code --install-extension ms-python.python
+RUN code --install-extension ms-python.python
 CMD bash
