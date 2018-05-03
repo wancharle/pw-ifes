@@ -1,4 +1,5 @@
-FROM ubuntu:18.04 RUN apt-get update -y
+FROM ubuntu:18.04
+RUN apt-get update -y
 RUN apt-get install python-pip -y
 RUN pip install flask peewee
 RUN apt-get install firefox -y
