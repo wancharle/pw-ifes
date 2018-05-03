@@ -20,7 +20,9 @@ RUN sed -i 's/BIG-REQUESTS/_IG-REQUESTS/' /usr/lib/x86_64-linux-gnu/libxcb.so.1.
 RUN sed -i 's/BIG-REQUESTS/_IG-REQUESTS/' /usr/lib/x86_64-linux-gnu/libxcb.so.1
 RUN apt-get install sudo -y
 RUN echo "ALL            ALL = (ALL) NOPASSWD: ALL" >>/etc/sudoers
+RUN pip install pylint
 
 WORKDIR /home/user
 USER user
+code --install-extension ms-python.python
 CMD bash
