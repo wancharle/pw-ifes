@@ -1,8 +1,13 @@
-FROM ubuntu:18.04
-RUN apt-get update -y
-RUN apt-get install python-pip -y
-RUN pip install flask peewee pylint
-RUN apt-get install curl -y
-RUN apt-get install vim -y
-RUN apt-get install git -y
-CMD bash
+FROM python:2.7-alpine
+
+RUN apk update && \
+    apk add --virtual build-deps gcc python-dev musl-dev && \
+    apk add postgresql-dev
+
+RUN pip install flask peewee pip psycopg2
+WORKDIR /root
+EXPOSE 80:5000
+VOLUME /root
+ENV FLASK_APP app.py
+ENV FLASK_DEBUG 1
+CMD sh
