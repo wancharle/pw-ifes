@@ -4,7 +4,7 @@ RUN apk update && \
     apk add --virtual build-deps gcc python-dev musl-dev && \
     apk add postgresql-dev
 
-RUN pip install flask peewee pip psycopg2
+RUN pip install flask peewee pip psycopg2 pymysql
 WORKDIR /root
 EXPOSE 80:5000
 VOLUME /root
