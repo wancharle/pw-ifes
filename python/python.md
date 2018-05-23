@@ -113,7 +113,6 @@ O código python acima não funciona, pois ele cria blocos novos em cada linha. 
 
 Já o código Java acima funciona. Isso ocorre, pois todas as linhas estão no mesmo bloco. E apesar das linhas começarem em colunas diferentes elas não criam blocos novos. Em java blocos novos são criados com as chaves. Usamos "{" para abrir um bloco e "}" para fechar.
 
-Executando os dois códigos acima, percebemos que um funciona e o outro não. **No entanto, os dois estão desorganizados**. Num contexto de trabalho em equipe, seria importante que nenhum dois códigos funcionassm enquanto o programador não organiza-se e indenta-se o código corretamente. 
 
 
 # Imprimindo texto na tela
@@ -389,7 +388,7 @@ a é menor que b
 <tr><td>
 
 ```python
-for variavel in sequencia:
+for variavel in sequência:
     # comandos
     ...
 ```
@@ -523,11 +522,13 @@ A função **len** é uma  função muito útil que pode ser utilizada para sabe
 ```
 
 ## Bibliografia
+Referência da linguagem em português:
 http://turing.com.br/pydoc/2.7/tutorial/introduction.html
 http://turing.com.br/pydoc/2.7/tutorial/modules.html
 http://turing.com.br/pydoc/2.7/tutorial/controlflow.html
 http://turing.com.br/pydoc/2.7/tutorial/datastructures.html
 
+Apostila de python da UFRJ: http://www.dcc.ufrj.br/~fabiom/python/pythonbasico.pdf
 
 
 
