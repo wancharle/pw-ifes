@@ -385,12 +385,11 @@ blockquote {
 
 </head>
 <body>
-<h1 id="python-resumo-da-sintaxe-da-linguagem-python">Python: Resumo da sintaxe da linguagem python</h1>
-<h2 id="identa%C3%A7%C3%A3o-para-separar-blocos">Identação para separar blocos</h2>
-<p>A sintaxe do python é bem limpa e enxuta.
-Python não precisa de chaves “{“ para abrir e nem para fechar blocos de comandos.
-No entanto, python utiliza como alternativa a identação de blocos. Ou seja, um bloco é delimitado não por chaves, mas pela sua identação. Ou seja, a coluna onde o texto começa delimita o bloco.</p>
-<p>Para ficar claro, observe alguns exemplos de comparação com a linguagem java:</p>
+<h1 id="python-resumo-da-sintaxe-da-linguagem">Python: Resumo da sintaxe da linguagem</h1>
+<h2 id="indenta%C3%A7%C3%A3o-para-separar-blocos">Indentação para separar blocos</h2>
+<p>A sintaxe do python é bem limpa e enxuta. Python não precisa de chaves ({) para abrir blocos de comandos e nem para fechar blocos de comandos.</p>
+<p>No entanto, python utiliza como alternativa a indentação de blocos. Ou seja, um bloco é delimitado não por chaves, mas pela sua indentação. Ou seja, a coluna onde o texto começa delimita o bloco.</p>
+<p>Para ficar claro, observe alguns exemplos de comparação com a linguagem Java:</p>
 <table><tr><th>JAVA</th><th>Python</th></tr>
 <tr>
 <td>
@@ -406,6 +405,8 @@ a=<span class="hljs-number">10</span>
 </div></code></pre>
 </td>
 </tr>
+</table>
+<table><tr><th>JAVA</th><th>Python</th></tr>
 <tr>
 <td>
 <pre class="hljs"><code><div>{
@@ -448,9 +449,9 @@ print(<span class="hljs-string">"O valor de b é "</span> + b)
 </td>
 </tr>
 </table>
-<p>Ao usar identação como delimitador de blocos python força o programador a manter seu código sempre identado e organizado. Portanto, se o programador não identar o código python não funciona. Isto é uma das vantagens do python, mas pode ser incomodo no início, pois a maioria dos programadores estão acostumados com outras linguagens que permitem códigos não identados.
-Por exemplo, observe a comparação abaixo:</p>
-<table><tr><th>Código JAVA não identado mas que funciona</th><th>Código Python com erro de identação</th></tr>
+<p>Ao usar indentação como delimitador de blocos a linguagem Python força o programador a manter seu código sempre indentado e organizado. <strong>Se o programador não indentar o código o programa python não funciona</strong>.</p>
+<p>A primeira vista pode não parecer, mas forçar a identação é uma das vantagens do Python. Por exemplo, observe os códigos abaixo:</p>
+<table><tr><th>Código JAVA não indentado mas que funciona</th><th>Código Python com erro de indentação</th></tr>
 <tr>
 <td>
 <pre class="hljs"><code><div>{
@@ -472,10 +473,11 @@ a=<span class="hljs-number">10</span> <span class="hljs-comment"># mesmo bloco</
 </td>
 </tr>
 </table>
-<p>O código python acima não funciona, pois ele cria blocos novos em cada linha. Cada linha começa em uma coluna (identação) diferente da anterior. <strong>Isto o python considera como um novo bloco</strong>. Portanto, o código não funciona, pois novos blocos só devem ser criados para estruturas como ifs, fors, whiles e funções.</p>
-<p>Já o código java acima funciona. Isto ocorre, pois todas as linhas estão no mesmo bloco. E apesar das linhas começarem em colunas diferentes elas não criam blocos novos. Em java blocos novos são criados com as chaves. Usamos &quot;{&quot; para abrir um bloco e &quot;}&quot; para fechar.</p>
+<p>O código python acima não funciona, pois ele cria blocos novos em cada linha. Cada linha começa em uma coluna (indentação) diferente da anterior. <strong>Isso o python considera como um novo bloco</strong>. Portanto, o código não funciona, pois novos blocos só devem ser criados para estruturas como ifs, fors, whiles e funções.</p>
+<p>Já o código Java acima funciona. Isso ocorre, pois todas as linhas estão no mesmo bloco. E apesar das linhas começarem em colunas diferentes elas não criam blocos novos. Em java blocos novos são criados com as chaves. Usamos &quot;{&quot; para abrir um bloco e &quot;}&quot; para fechar.</p>
+<p>Executando os dois códigos acima, percebemos que um funciona e o outro não. <strong>No entanto, os dois estão desorganizados</strong>. Num contexto de trabalho em equipe, seria importante que nenhum dois códigos funcionassm enquanto o programador não organiza-se e indenta-se o código corretamente.</p>
 <h1 id="imprimindo-texto-na-tela">Imprimindo texto na tela</h1>
-<p>Um programa python que imprime o texto &quot;Bem-vindo!&quot; na tela é bem simples de se fazer quando comprado com o mesmo programa equivalente Java:</p>
+<p>Um programa python que imprime o texto <strong>&quot;Bem-vindo!&quot;</strong> na tela é relativamente simples quando comprado com o mesmo programa equivalente Java:</p>
 <table><tr><th>Programa Java</th><th>Programa Python</th></tr>
 <tr>
 <td>
@@ -492,25 +494,24 @@ a=<span class="hljs-number">10</span> <span class="hljs-comment"># mesmo bloco</
 </td>
 </tr>
 </table>
-<h3 id="tipos-de-dados">Tipos de dados</h3>
-<p>O Python é uma linguagem não tipada (variáveis com valores dinâmicos), ou seja, não há a necessidade de declarar o tipo da variável. Assim, durante a execução do script uma variável pode receber valores do tipo “String” (texto) e, posteriormente, receber valores do tipo “int” (inteiro), &quot;float&quot;(real,fracionário) e até outros objetos.</p>
-<p>Pode-se, ainda, “forçar” uma variável a receber um tipo determinado de dados. Exemplo:</p>
+<h1 id="tipos-de-dados">Tipos de dados</h1>
+<p>O Python é uma linguagem não tipada (variáveis com valores dinâmicos), ou seja, não há a necessidade de declarar o tipo da variável. Assim, durante a execução do script, uma variável pode receber valores do tipo “String” (texto) e, posteriormente, receber valores do tipo “int” (inteiro), &quot;float&quot;(real,fracionário) e até outros objetos.</p>
+<p>Pode-se, ainda, “forçar” uma variável a receber um tipo determinado de dados. Veja o exemplo:</p>
 <pre class="hljs"><code><div>salario = str(<span class="hljs-number">900.0</span>)
 </div></code></pre>
-<p>No exemplo acima, o valor float 900.00 está sendo forçado a virar um valor do tipo string, ou seja, o mesmo que “900.00”.</p>
-<p>O inverso também pode ser feito, A string &quot;900.0&quot; pode ser convertida para um número do tipo float:</p>
+<p>No exemplo acima, o valor float <strong>900.0</strong> está sendo forçado a virar um valor do tipo string, ou seja, o mesmo que <strong>“900.0”</strong>.</p>
+<p>O inverso também pode ser feito, a string <strong>&quot;900.0&quot;</strong> pode ser convertida para um número do tipo float:</p>
 <pre class="hljs"><code><div>salario = float(<span class="hljs-string">"900.0"</span>)
 </div></code></pre>
-<p>No tópico a seguir, veremos mais sobre variáveis.</p>
 <h1 id="variaveis">Variaveis</h1>
-<p>Em Python, não é necessário declarar as variáveis, basta que o programador atribua um valor à variável e esta já estará guardada na memória. Para criar variáveis em Python é necessário seguir algumas regras:</p>
+<p>Na linguagem Python não é necessário declararmos as variáveis antecipadamente, pois basta que o programador atribua um valor à variável e esta já estará guardada na memória. Para criar variáveis em Python é necessário seguir algumas regras:</p>
 <ul>
 <li>Os nomes das variáveis só podem conter letras, números e underline &quot;_&quot;.</li>
 <li>Os nomes de variáveis devem sempre começar com letra minúscula.</li>
 <li>Os nomes das variáveis são case sensitive, ou seja, diferem letras maiúsculas de minúsculas.</li>
-<li><strong>Não</strong> podemos utilizar os seguintes nomes para váriaveis: <img src="Palavras_reservadas.png"></li>
+<li>É proibido utilizar os seguintes nomes para váriaveis: <img src="Palavras_reservadas.png"></li>
 </ul>
-<p>Abaixo temos um exemplo de criação de variaveis em python. Neste exemplo foi criado três variáveis (x, y, e total) e em seguida impresso na tela os valores:</p>
+<p>Abaixo temos um exemplo de criação de variáveis em python. Neste exemplo foi criado três variáveis (<strong>x</strong>, <strong>y</strong>, e <strong>total</strong>) e em seguida impresso na tela os valores correspondentes:</p>
 <pre class="hljs"><code><div>x = <span class="hljs-number">10</span>
 y = <span class="hljs-number">8</span>
 total = x + y
@@ -520,35 +521,33 @@ print(<span class="hljs-string">"A soma de "</span> + x + <span class="hljs-stri
 <p>O programa acima quando executado gera a seguinte resposta na tela:</p>
 <pre class="hljs"><code><div>A soma de 10 com 8 é igual a 18
 </div></code></pre>
-<p>Conforme se pode perceber, além de não declarar, também não informamos o tipo de dados das variáveis, pois isso não é necessário no Python.</p>
+<p>Conforme podemos perceber, além de não declarar, também não informamos o tipo de dados das variáveis, pois isso também não é necessário no Python.</p>
 <p>Isso vale também para a criação de listas(array ou vetor) e dicionários de dados.</p>
+<h1 id="estruturas-de-dados">Estruturas de dados</h1>
+<p>Python possue diversas estruturas de dados. As mais utilizadas são as listas e os dicionários.</p>
 <h2 id="listas">Listas</h2>
-<p>Uma lista pode ser criada de várias formas:</p>
-<h3 id="listas-arrays-forma-1">Listas (arrays) Forma 1</h3>
+<p>Uma lista é uma sequência de objetos python. É Algo parecido com o ArrayList do Java.</p>
+<p>No python ainda temos a vantagem de poder ter uma lista de objetos de tipos variados.</p>
 <p>A primeira forma de criar uma lista é usando a funçao <strong>list</strong>. Veja o exemplo abaixo que cria uma lista de números</p>
 <pre class="hljs"><code><div>numeros = list(<span class="hljs-number">13</span>,<span class="hljs-number">29</span>,<span class="hljs-number">27</span>,<span class="hljs-number">64</span>,<span class="hljs-number">22</span>)
 </div></code></pre>
-<h4 id="listas-arrays-forma-2">Listas (arrays) Forma 2</h4>
 <p>Outra forma de criar uma lista é usando o caracter []. Veja</p>
 <pre class="hljs"><code><div>numeros = [<span class="hljs-number">13</span>,<span class="hljs-number">29</span>,<span class="hljs-number">27</span>,<span class="hljs-number">64</span>,<span class="hljs-number">22</span>]
 </div></code></pre>
-<h3 id="acesso-aos-dados-de-listas">Acesso aos dados de listas</h3>
-<p>De posse de umalista podemos visualizar o conteúdo dela tendo como auxílio o caractere especial []. Vejamos alguns exemplos:</p>
+<p>De posse de uma lista podemos visualizar o conteúdo dela tendo como auxílio o caractere especial []. Vejamos alguns exemplos:</p>
 <pre class="hljs"><code><div><span class="hljs-keyword">print</span> numeros[<span class="hljs-number">1</span>] <span class="hljs-comment"># vai imprimir o valor 29</span>
 <span class="hljs-keyword">print</span> numeros[<span class="hljs-number">3</span>] <span class="hljs-comment"># vai imprimir o valor 64</span>
 <span class="hljs-keyword">print</span> numeros[<span class="hljs-number">0</span>] <span class="hljs-comment"># vai imprimir o valor 13</span>
 </div></code></pre>
 <p><strong>Observação</strong>: os indices das listas em python começam na posição 0 (zero)</p>
 <h2 id="dicion%C3%A1rios">Dicionários</h2>
-<p>Alem das listas, em python também podemos criar dicionários de dados que é uma estrutura de dados muito versátil e poderosa.</p>
-<h3 id="dicion%C3%A1rios-forma-1">Dicionários forma 1</h3>
-<p>A primeira forma de criar um dicionario é usando a funçao <strong>dict</strong>. Veja o exemplo abaixo que cria um dicionário vazio e em seguida insere chaves valores ao dicionário:</p>
+<p>Além das listas, em python também podemos criar dicionários de dados que é uma estrutura de dados muito versátil e poderosa.</p>
+<p>A primeira forma de criar um dicionario é usando a funçao <strong>dict</strong>. Veja o exemplo abaixo que cria um dicionário vazio e em seguida insere chaves e valores ao dicionário:</p>
 <pre class="hljs"><code><div>aluno = dict()
 aluno[<span class="hljs-string">"nome"</span>] = <span class="hljs-string">"Pedro"</span>
 aluno[<span class="hljs-string">"idade"</span>] = <span class="hljs-number">18</span>
 aluno[<span class="hljs-string">"email"</span>] = <span class="hljs-string">"pedro@gmail.com"</span>
 </div></code></pre>
-<h3 id="dicion%C3%A1rios-forma-2">Dicionários forma 2</h3>
 <p>Outra forma de criar dicionários é utilizando os carecteres de chaves {}.
 Veja um exemplo:</p>
 <pre class="hljs"><code><div>aluno = {
@@ -557,12 +556,9 @@ Veja um exemplo:</p>
     <span class="hljs-string">"email"</span> : <span class="hljs-string">"pedro@gmail.com"</span>
 } 
 </div></code></pre>
-<h3 id="acesso-aos-dados-de-dicion%C3%A1rios">Acesso aos dados de dicionários</h3>
-<p>Como visto acima, podemos inserir tanto string como números nos valores do dicionário.</p>
-<p>Para imprimir os dados do dicionário é simples. Ele segue a mesma notação da lista de usar [] para acessar os elementos. A diferença é que na lista usa-se números nos indices, mas no dicionário podemos usar strings(texto).</p>
+<p>Para imprimir os dados do dicionário é simples. Ele segue a mesma Notação da lista de usar [] para acessar os elementos. A diferença é que na lista usamos números nos indices, mas no dicionário podemos usar strings(texto) também.</p>
 <p>Outra forma de imprimir os dados de um dicionário é utilizando a função <strong>format</strong> das strings.
-Para isso, devemos passar o dicionario como parâmetro da função format e acrescentar os caracteres <strong>**</strong> antes do nome do dicionário.</p>
-<p>Essa outra forma permite fazer um código mais limpo e organizado. Compare as duas formas</p>
+Para isso, devemos passar o dicionario como parâmetro da função format e acrescentar os caracteres <strong>**</strong> antes do nome do dicionário. Essa outra forma permite fazer um código mais limpo e organizado. Compare as duas formas:</p>
 <pre class="hljs"><code><div><span class="hljs-comment"># 1ª forma  de imprimir dados do dicionario</span>
 <span class="hljs-keyword">print</span> <span class="hljs-string">"O aluno "</span> + aluno[<span class="hljs-string">"nome"</span>] + <span class="hljs-string">" de "</span> + aluno[<span class="hljs-string">"idade"</span>] + <span class="hljs-string">" anos tem email "</span> + aluno[<span class="hljs-string">"email"</span>]
 
@@ -575,7 +571,7 @@ O aluno Pedro de 18 anos tem email pedro@gmail.com
 </div></code></pre>
 <p>Podemos observar acima que ambas as formas imprimem os dados corretamente. Portanto, fica a cargo do programador escolher qual forma prefere utilizar em seu projeto.</p>
 <h1 id="concatenando-valores">Concatenando valores</h1>
-<p>A concatenação de valores é uma técnica que auxilia muito as linguagens de programação. No Pythnon utilizamos o sinal de soma (+) para concatenar os valores. Veja:</p>
+<p>A concatenação de valores é uma técnica que auxilia muito as linguagens de programação. No Python utilizamos o sinal de soma (+) para concatenar os valores. Veja:</p>
 <pre class="hljs"><code><div>texto = <span class="hljs-string">"Olá mundo!"</span> + <span class="hljs-string">" Sou novo aqui."</span>
 </div></code></pre>
 <p>O código acima irá armazerar na memória uma variável chamada <strong>texto</strong> cujo o conteúdo concatenado é: <strong>&quot;Olá mundo! Sou novo aqui.&quot;</strong>.</p>
@@ -583,7 +579,7 @@ O aluno Pedro de 18 anos tem email pedro@gmail.com
 <pre class="hljs"><code><div>nome = <span class="hljs-string">"Charles"</span>
 texto = <span class="hljs-string">"Meu nome é "</span> +  nome
 </div></code></pre>
-<p>O código acima irá armazerar na memória uma variável chamada <strong>texto</strong> cujo o conteúdo concatenado é: <strong>&quot;Meu nome é Charles</strong>.</p>
+<p>O código acima irá armazerar na memória uma variável chamada <strong>texto</strong> cujo o conteúdo concatenado é: <strong>&quot;Meu nome é Charles&quot;</strong>.</p>
 <p>A concatenação também funciona com listas:</p>
 <pre class="hljs"><code><div>lista1 = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]
 lista2 = [<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]
@@ -592,46 +588,49 @@ lista3 = lista1 + lista2
 <p>O código acima irá armazerar na memória uma variável chamada <strong>lista3</strong> cujo o conteúdo concatenado é: <strong>[1,2,3,4,5]</strong>.</p>
 <h1 id="operadores">Operadores</h1>
 <h2 id="operadores-aritim%C3%A9ticos">Operadores Aritiméticos</h2>
-<img src="operadores.png">
+<img src="operadores.png" width="500px">
 <h2 id="operadores-condicionais">Operadores Condicionais</h2>
-<img src="opcondicional.png">
+<img src="opcondicional.png" width="250px">
 <h2 id="operadores-condicionais-combinados">Operadores Condicionais combinados</h2>
-<img src="opcombinado.png">
+<img src="opcombinado.png" width="500px">
 <h2 id="operadores-condicionais-combinados-com-and-or-e-not">Operadores Condicionais combinados com AND, OR e NOT</h2>
-<img src="opand2.png">
+<img src="opand2.png" width="500px">
 <h1 id="estruturas">Estruturas</h1>
 <h2 id="if">IF</h2>
 <table>
-<tr><th>notação</th><th>Exemplo</th></tr>
-<tr><td><img src="if1.png"></td>
-<td><img src="if2.png"></td>
+<tr><th>Notação</th><th>Exemplo</th></tr>
+<tr><td><img src="if1.png" width="500px"></td>
+<td><img src="if2.png" width="500px"></td>
 </tr></table>
 <h2 id="for">FOR</h2>
 <table>
-<tr><th>notação</th><th>Exemplo</th></tr>
-<tr><td><img src="for1.png"></td>
-<td><img src="for2.png"></td>
+<tr><th>Notação</th><th>Exemplo</th></tr>
+<tr><td><img src="for1.png" width="500px"></td>
+<td><img src="for2.png" width="500px"></td>
 </tr></table>
 <h2 id="while">WHILE</h2>
 <table>
-<tr><th>notação</th><th>Exemplo</th></tr>
-<tr><td><img src="while1.png"></td>
-<td><img src="while2.png"></td>
+<tr><th>Notação</th><th>Exemplo</th></tr>
+<tr><td><img src="while1.png" width="500px"></td>
+<td><img src="while2.png" width="500px"></td>
 </tr></table>
 <h1 id="fun%C3%A7%C3%B5es">Funções</h1>
-<h2 id="nota%C3%A7ao">Notaçao</h2>
+<h2 id="nota%C3%A7%C3%A3o">Notação</h2>
 <table>
-<tr><th>notação</th><th>Exemplo</th></tr>
-<tr><td><img src="func1.png"></td>
-<td><img src="func2.png"></td>
+<tr><th>Notação</th><th>Exemplo</th></tr>
+<tr><td><img src="func1.png" width="500px"></td>
+<td><img src="func2.png" width="500px"></td>
 </tr></table>
 <p>Funções podem ter parametros com valores padrão. Veja o exemplo:
-<img src="funcpadrao.png"></p>
-<p>E funções podem ter número de parametros variáveis:
-<img src="funcmult.png"></p>
-<h1 id="fun%C3%A7%C3%B5es-%C3%BAteis">Funções úteis</h1>
-<h2 id="fun%C3%A7%C3%A3o-len">função len</h2>
-<img src="funclen.png">
+<img src="funcpadrao.png" width="500px">
+No exemplo acima, a função <strong>aplicar_multa</strong> tem dois parametros: <strong>valor</strong> e <strong>taxa</strong>. No entanto, o segundo parametro (taxa) tem uma valor padrão (<strong>0.15</strong>). Isso implica que ao chamarmos a função não precisamos passar o segundo parametro se o valor dele for igual ao valor padrão(primeiro print do exemplo).</p>
+<p>E funções podem ter número de parâmetros variáveis:
+<img src="funcmult.png" width="500px">
+No exemplo acima, que calcula a media dos valores passados omo parâmetros, os parametros são informados a função na forma de uma lista de nome <strong>*valores</strong>.</p>
+<p>Observe que foi necessário acrescentar o <strong>&quot;*&quot;</strong> antes da palavra valores. Isso foi feito para informar a função <strong>media</strong> que a variável <strong>valores</strong> não é um parâmetro simples e mas sim vários parâmetros.</p>
+<h2 id="fun%C3%A7%C3%A3o-len">Função len</h2>
+<p>A função <strong>len</strong> é uma  função muito útil que pode ser utilizada para saber o comprimento de uma string ou número de elementos de lista. Veja o exemplo:
+<img src="funclen.png" width="500px"></p>
 <h2 id="bibliografia">Bibliografia</h2>
 <p>http://turing.com.br/pydoc/2.7/tutorial/introduction.html
 http://turing.com.br/pydoc/2.7/tutorial/modules.html
