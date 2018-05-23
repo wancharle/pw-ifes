@@ -290,22 +290,22 @@ O código acima irá armazerar na memória uma variável chamada **lista3** cujo
 <img src="opand2.png">
 
 
-# Estruturas 
-## IF
+## Estruturas 
+### IF
 <table>
 <tr><th>notação</th><th>Exemplo</th></tr>
 <tr><td><img src="if1.png"></td>
 <td><img src="if2.png"></td>
 </tr></table>
 
-## FOR
+### FOR
 <table>
 <tr><th>notação</th><th>Exemplo</th></tr>
 <tr><td><img src="for1.png"></td>
 <td><img src="for2.png"></td>
 </tr></table>
 
-## WHILE 
+### WHILE 
 <table>
 <tr><th>notação</th><th>Exemplo</th></tr>
 <tr><td><img src="while1.png"></td>
@@ -327,9 +327,9 @@ Funções podem ter parametros com valores padrão. Veja o exemplo:
 E funções podem ter número de parametros variáveis:
 <img src="funcmult.png">
 
-# Funções úteis
+## Funções úteis
 
-## função len
+Função len
 <img src="funclen.png">
 
 
@@ -337,8 +337,11 @@ E funções podem ter número de parametros variáveis:
 
 ## Bibliografia
 http://turing.com.br/pydoc/2.7/tutorial/introduction.html
+
 http://turing.com.br/pydoc/2.7/tutorial/modules.html
+
 http://turing.com.br/pydoc/2.7/tutorial/controlflow.html
+
 http://turing.com.br/pydoc/2.7/tutorial/datastructures.html
 
 
