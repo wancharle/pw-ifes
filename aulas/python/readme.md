@@ -136,29 +136,29 @@ print("Bem-vindo!")
 </table>
 
 ### Tipos de dados
-O Python é uma linguagem não tipada (variáveis com valores dinâmicos), ou seja, não há a necessidade de declarar o tipo da variável. Assim, durante a execução do script uma variável pode receber valores do tipo “String” (texto) e, posteriormente, receber valores do tipo “int” (inteiro), "float"(real,fracionário) e até outros objetos.
+O Python é uma linguagem não tipada (variáveis com valores dinâmicos), ou seja, não há a necessidade de declarar o tipo da variável. Assim, durante a execução do script uma variável pode receber valores do tipo “String” (texto) e, posteriormente, receber valores do tipo “int” (inteiro), "float"(real,fracionário) e até outros objetos.
 
-Pode-se, ainda, “forçar” uma variável a receber um tipo determinado de dados. Exemplo:
+Pode-se, ainda, “forçar” uma variável a receber um tipo determinado de dados. Exemplo:
 
 ```python
 salario = str(900.0)
 ```
-No exemplo acima, o valor float 900.00 está sendo forçado a virar um valor do tipo string, ou seja, o mesmo que “900.00”.
+No exemplo acima, o valor float 900.00 está sendo forçado a virar um valor do tipo string, ou seja, o mesmo que “900.00”.
 
 O inverso também pode ser feito, A string "900.0" pode ser convertida para um número do tipo float:
 ```python
 salario = float("900.0")
 ```
 
-No tópico a seguir, veremos mais sobre variáveis.
+No tópico a seguir, veremos mais sobre variáveis.
 
 # Variaveis
 
-Em Python, não é necessário declarar as variáveis, basta que o programador atribua um valor à variável e esta já estará guardada na memória. Para criar variáveis em Python é necessário seguir algumas regras:
+Em Python, não é necessário declarar as variáveis, basta que o programador atribua um valor à variável e esta já estará guardada na memória. Para criar variáveis em Python é necessário seguir algumas regras:
 
-* Os nomes das variáveis só podem conter letras, números e underline "_". 
+* Os nomes das variáveis só podem conter letras, números e underline "_". 
 * Os nomes de variáveis devem sempre começar com letra minúscula.
-* Os nomes das variáveis são case sensitive, ou seja, diferem letras maiúsculas de minúsculas.
+* Os nomes das variáveis são case sensitive, ou seja, diferem letras maiúsculas de minúsculas.
 * **Não** podemos utilizar os seguintes nomes para váriaveis: <img src="Palavras_reservadas.png">
 
 Abaixo temos um exemplo de criação de variaveis em python. Neste exemplo foi criado três variáveis (x, y, e total) e em seguida impresso na tela os valores:
@@ -174,7 +174,7 @@ O programa acima quando executado gera a seguinte resposta na tela:
 ```
 A soma de 10 com 8 é igual a 18
 ```
-Conforme se pode perceber, além de não declarar, também não informamos o tipo de dados das variáveis, pois isso não é necessário no Python.
+Conforme se pode perceber, além de não declarar, também não informamos o tipo de dados das variáveis, pois isso não é necessário no Python.
 
 Isso vale também para a criação de listas(array ou vetor) e dicionários de dados.
 ## Listas
@@ -193,7 +193,7 @@ numeros = [13,29,27,64,22]
 ```
 
 ### Acesso aos dados de listas
-De posse de umalista podemos visualizar o conteúdo dela tendo como auxílio o caractere especial []. Vejamos alguns exemplos:
+De posse de umalista podemos visualizar o conteúdo dela tendo como auxílio o caractere especial []. Vejamos alguns exemplos:
 
 ```python
 print numeros[1] # vai imprimir o valor 29
@@ -253,13 +253,13 @@ O aluno Pedro de 18 anos tem email pedro@gmail.com
 Podemos observar acima que ambas as formas imprimem os dados corretamente. Portanto, fica a cargo do programador escolher qual forma prefere utilizar em seu projeto.
 
 # Concatenando valores
-A concatenação de valores é uma técnica que auxilia muito as linguagens de programação. No Pythnon utilizamos o sinal de soma (+) para concatenar os valores. Veja:
+A concatenação de valores é uma técnica que auxilia muito as linguagens de programação. No Pythnon utilizamos o sinal de soma (+) para concatenar os valores. Veja:
 ```python
 texto = "Olá mundo!" + " Sou novo aqui."
 ```
 O código acima irá armazerar na memória uma variável chamada **texto** cujo o conteúdo concatenado é: **"Olá mundo! Sou novo aqui."**.
 
-O mesmo vale para a concatenação de variáveis: 
+O mesmo vale para a concatenação de variáveis: 
 ```python
 nome = "Charles"
 texto = "Meu nome é " +  nome
