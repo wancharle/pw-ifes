@@ -528,7 +528,7 @@ http://turing.com.br/pydoc/2.7/tutorial/modules.html
 http://turing.com.br/pydoc/2.7/tutorial/controlflow.html
 http://turing.com.br/pydoc/2.7/tutorial/datastructures.html
 
-Apostila de python da UFRJ: http://www.dcc.ufrj.br/~fabiom/python/pythonbasico.pdf
+Apostila de python da UFRJ: [Python Básico](pythonbasico.pdf)
 
 
 
