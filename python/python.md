@@ -162,7 +162,7 @@ Na linguagem Python não é necessário declararmos as variáveis antecipada
 * Os nomes das variáveis só podem conter letras, números e underline "_". 
 * Os nomes de variáveis devem sempre começar com letra minúscula.
 * Os nomes das variáveis são case sensitive, ou seja, diferem letras maiúsculas de minúsculas.
-* É proibido utilizar os seguintes nomes para váriaveis: <img src="Palavras_reservadas.png">
+* É proibido utilizar os seguintes nomes para variáveis: <img src="Palavras_reservadas.png">
 
 Abaixo temos um exemplo de criação de variáveis em python. Neste exemplo foi criado três variáveis (**x**, **y**, e **total**) e em seguida impresso na tela os valores correspondentes:
 
@@ -178,29 +178,27 @@ O programa acima quando executado gera a seguinte resposta na tela:
 A soma de 10 com 8 é igual a 18
 ```
 
-Conforme podemos perceber, além de não declarar, também não informamos o tipo de dados das variáveis, pois isso também não é necessário no Python.
-
-Isso vale também para a criação de listas(array ou vetor) e dicionários de dados.
+Conforme podemos perceber, além de não declarar, também não informamos o tipo de dados das variáveis, pois isso também não é necessário no Python. Isso vale também para a criação de listas(array ou vetor) e dicionários de dados.
 # Estruturas de dados
 
-Python possue diversas estruturas de dados. As mais utilizadas são as listas e os dicionários.
+Python possui diversas estruturas de dados. As mais utilizadas são as listas e os dicionários.
 
 ## Listas
 Uma lista é uma sequência de objetos python. É Algo parecido com o ArrayList do Java.
 
 No python ainda temos a vantagem de poder ter uma lista de objetos de tipos variados.
 
-A primeira forma de criar uma lista é usando a funçao **list**. Veja o exemplo abaixo que cria uma lista de números 
+A primeira forma de criar uma lista é usando a funçao **list**. Veja o exemplo abaixo que cria uma lista de números:
 ```python
 numeros = list(13,29,27,64,22)
 ````
 
-Outra forma de criar uma lista é usando o caracter []. Veja
+Outra forma de criar uma lista é usando **colchetes []**. Veja:
 ```python
 numeros = [13,29,27,64,22]
 ```
 
-De posse de uma lista podemos visualizar o conteúdo dela tendo como auxílio o caractere especial []. Vejamos alguns exemplos:
+De posse de uma lista podemos visualizar o conteúdo dela através da indexação por colchetes. Vejamos alguns exemplos:
 
 ```python
 print numeros[1] # vai imprimir o valor 29
@@ -211,7 +209,7 @@ print numeros[0] # vai imprimir o valor 13
 
 
 ## Dicionários
-Além das listas, em python também podemos criar dicionários de dados que é uma estrutura de dados muito versátil e poderosa.
+Além das listas, em python também podemos criar dicionários de dados que são uma estrutura de dados muito versáteis e poderosas.
 
 A primeira forma de criar um dicionario é usando a funçao **dict**. Veja o exemplo abaixo que cria um dicionário vazio e em seguida insere chaves e valores ao dicionário:
 
@@ -222,7 +220,7 @@ aluno["idade"] = 18
 aluno["email"] = "pedro@gmail.com"
 ```
 
-Outra forma de criar dicionários é utilizando os carecteres de chaves {}.
+Outra forma de criar dicionários é utilizando **chaves {}**.
 Veja um exemplo:
 ```python
 aluno = {
@@ -232,10 +230,9 @@ aluno = {
 } 
 ```
 
-Para imprimir os dados do dicionário é simples. Ele segue a mesma Notação da lista de usar [] para acessar os elementos. A diferença é que na lista usamos números nos indices, mas no dicionário podemos usar strings(texto) também. 
+Para imprimir os dados do dicionário é simples. Ele segue a mesma Notação da lista de usar colchetes para acessar os elementos. A diferença é que na lista usamos números nos indices, mas no dicionário podemos usar strings(texto) também.
 
-Outra forma de imprimir os dados de um dicionário é utilizando a função **format** das strings.
-Para isso, devemos passar o dicionario como parâmetro da função format e acrescentar os caracteres **\*\*** antes do nome do dicionário. Essa outra forma permite fazer um código mais limpo e organizado. Compare as duas formas:
+Outra forma de imprimir os dados de um dicionário é utilizando a função **format** das strings. Para isso, devemos passar o dicionario como parâmetro da função format e acrescentar os caracteres **\*\*** antes do nome do dicionário. Essa outra forma permite fazer um código mais limpo e organizado. Compare as duas formas:
 
 ```python
 # 1ª forma  de imprimir dados do dicionario
@@ -475,8 +472,8 @@ def nome_da_função(arg1, arg2, ... , argN):
 </td>
 </tr></table>
 
-## Parametros com valores padrão
-Funções podem ter parametros com valores padrão. Veja o exemplo:
+## Parâmetros com valores padrão
+Funções podem ter parâmetros com valores padrão. Veja o exemplo:
 ```python {class="line-numbers"}
 >>> def aplicar_multa(valor, taxa = 0.15):
 ...    return valor*(1.0 + taxa)
@@ -486,11 +483,11 @@ Funções podem ter parametros com valores padrão. Veja o exemplo:
 >>> print "Valor a pagar: %5.2f" % aplicar_multa(100,0.25)
 125.00
 ```
-No exemplo acima, a função **aplicar_multa** tem dois parametros: **valor** e **taxa**. No entanto, o segundo parametro (taxa) tem uma valor padrão (**0.15**). Isso implica que ao chamarmos a função não precisamos passar o segundo parametro se o valor dele for igual ao valor padrão(linha 4). Neste caso,  a função considera como valor padrão a taxa de 15%. 
+No exemplo acima, a função **aplicar_multa** tem dois parâmetros: **valor** e **taxa**. No entanto, o segundo parâmetro (taxa) tem uma valor padrão (**0.15**). Isso implica que ao chamarmos a função não precisamos passar o segundo parâmetro se o valor dele for igual ao valor padrão(linha 4). Neste caso,  a função considera como valor padrão a taxa de 15%. 
 
-Na linha 6, temos outro caso onde trocamos o valor da taxa passando como parametro o novo valor 0.25 (25%).
+Na linha 6, temos outro caso onde trocamos o valor da taxa passando como parâmetro o novo valor 0.25 (25%).
 
-## Funções com número de parametros variáveis
+## Funções com número de parâmetros variáveis
 
 E funções podem ter número de parâmetros variáveis:
 ```python
@@ -504,9 +501,9 @@ E funções podem ter número de parâmetros variáveis:
 3.5
 ```
 
-No exemplo acima, que calcula a media dos valores passados omo parâmetros, os parametros são informados a função na forma de uma lista de nome **\*valores**.
+No exemplo acima, que calcula a media dos valores passados como parâmetros, os parâmetros são informados a função na forma de uma lista de nome **\*valores**.
 
-Observe que foi necessário acrescentar o **"\*"** antes da palavra valores. Isso foi feito para informar a função **media** que a variável **valores** não é um parâmetro simples e mas sim vários parâmetros.
+Observe que foi necessário acrescentar o **"\*"** antes da palavra valores. Isso foi feito para informar a função **media** que a variável **valores** não é um parâmetro simples, mas sim vários parâmetros.
 
 
 
@@ -520,6 +517,7 @@ A função **len** é uma  função muito útil que pode ser utilizada para sabe
 >>> len(lista)
 3
 ```
+
 
 ## Bibliografia
 Referência da linguagem em português:
