@@ -1,3 +1,4 @@
+
 # Python: Resumo da sintaxe da linguagem
 
 
@@ -283,39 +284,165 @@ O código acima irá armazerar na memória uma variável chamada **lista3** cujo
 
 ## Operadores Aritiméticos
 
-<img src="operadores.png" width="500px">
+```python 
+>>> 7 + 3               # Adição
+10
+>>> 7 - 3               # subtração
+4
+>>> 8 % 3               # resto da divisão
+2
+>>> 8 / 3               # divisão inteira
+2
+>>> 8 / 3.              # divisão em ponto flutuante
+2.6666666666666665
+>>> 8 * 3               # produto
+24
+>>> 8 ** 2              # exponenciação
+64
+
+```
 
 ## Operadores Condicionais
-<img src="opcondicional.png" width="250px">
+
+```python
+>>> 2 == 4
+False
+>>> 2 != 4
+True
+>>> 2 > 4
+False
+>>> 2 < 4
+True
+>>> 3 <= 3
+True
+```
 
 ## Operadores Condicionais combinados
 
-<img src="opcombinado.png" width="500px">
+```python
+>>> a = 5
+>>> b = 3
+>>> 0 < a < b       # avaliação é feita da esquerda para direita
+False
+>>> 0 < a > b
+True
+```
 
 ## Operadores Condicionais combinados com AND, OR e NOT
-<img src="opand2.png" width="500px">
+
+```python
+>>> nome = 'pedro''
+>>> idade = 25
+>>> nome == 'pedro' and idade == 25
+True
+>>> len(nome) < 10 and idade > 30
+False
+>>> len(nome) < 10 and idade > 30
+True
+```
 
 
 # Estruturas 
 ## IF
 <table>
 <tr><th>Notação</th><th>Exemplo</th></tr>
-<tr><td><img src="if1.png" width="500px"></td>
-<td><img src="if2.png" width="500px"></td>
+<tr><td>
+
+```python
+if condição:
+    # comandos
+    ...
+elif condição:
+    # comandos
+    ...
+else:
+    # comandos
+    ...
+```
+
+</td>
+<td>
+
+```python
+>>> a = 5
+>>> b = 8
+>>> if a > b:
+...      print "a é maior que b"
+...     c = "maior que "
+... elif a == b:
+...     print "a é igual a b"
+...     c = "igual a "
+... else:
+...     print "a é menor que b"
+...     c = "menor que "
+a é menor que b
+>>> print a, c, b
+5 menor que 8
+```
+
+</td>
 </tr></table>
 
 ## FOR
 <table>
 <tr><th>Notação</th><th>Exemplo</th></tr>
-<tr><td><img src="for1.png" width="500px"></td>
-<td><img src="for2.png" width="500px"></td>
+<tr><td>
+
+```python
+for variavel in sequencia:
+    # comandos
+    ...
+```
+
+</td>
+<td>
+
+
+```python 
+>>> lista = ["pedra", 12, 54.5, 3]
+>>> for item in lista:
+...     print item
+pedra
+12
+54.5
+3
+>>> for i in range(2,5):
+...     print i
+1
+2
+3
+4
+```
+</td>
 </tr></table>
 
 ## WHILE 
 <table>
 <tr><th>Notação</th><th>Exemplo</th></tr>
-<tr><td><img src="while1.png" width="500px"></td>
-<td><img src="while2.png" width="500px"></td>
+<tr><td>
+
+```python
+while condição:
+    # comandos
+    ...
+```
+</td>
+<td>
+
+
+```python
+>>> m = 3 * 19
+>>> n = 5 * 13
+>>> contador = 0
+>>> while m < n:
+...    m = n / 0.5
+...    n = m / 0.5
+...    contador += 1
+>>> print "Foram %d interações" % contador
+Foram 510 interações
+```
+
+</td>
 </tr></table>
 
 # Funções
@@ -323,17 +450,61 @@ O código acima irá armazerar na memória uma variável chamada **lista3** cujo
 ## Notação
 <table>
 <tr><th>Notação</th><th>Exemplo</th></tr>
-<tr><td><img src="func1.png" width="500px"></td>
-<td><img src="func2.png" width="500px"></td>
+<tr><td>
+
+```python
+def nome_da_função(arg1, arg2, ... , argN):
+    # código da função
+    return valor_de_retorno   # return é opcional
+```
+
+</td>
+<td>
+
+
+```python
+>>> def fibonacci(n):
+...     a = 0
+...     b = 1 
+...     while b < n:
+...         print b,
+...         a = b
+...         b = a + b
+>>> fibonacci(100)
+1 1 2 3 5 8 13 21 34 55 89
+```
+</td>
 </tr></table>
 
+## Parametros com valores padrão
 Funções podem ter parametros com valores padrão. Veja o exemplo:
-<img src="funcpadrao.png" width="500px">
-No exemplo acima, a função **aplicar_multa** tem dois parametros: **valor** e **taxa**. No entanto, o segundo parametro (taxa) tem uma valor padrão (**0.15**). Isso implica que ao chamarmos a função não precisamos passar o segundo parametro se o valor dele for igual ao valor padrão(primeiro print do exemplo).
+```python {class="line-numbers"}
+>>> def aplicar_multa(valor, taxa = 0.15):
+...    return valor*(1.0 + taxa)
+...
+>>> print "Valor a pagar: %5.2f" % aplicar_multa(100)
+115.00
+>>> print "Valor a pagar: %5.2f" % aplicar_multa(100,0.25)
+125.00
+```
+No exemplo acima, a função **aplicar_multa** tem dois parametros: **valor** e **taxa**. No entanto, o segundo parametro (taxa) tem uma valor padrão (**0.15**). Isso implica que ao chamarmos a função não precisamos passar o segundo parametro se o valor dele for igual ao valor padrão(linha 4). Neste caso,  a função considera como valor padrão a taxa de 15%. 
 
+Na linha 6, temos outro caso onde trocamos o valor da taxa passando como parametro o novo valor 0.25 (25%).
+
+## Funções com número de parametros variáveis
 
 E funções podem ter número de parâmetros variáveis:
-<img src="funcmult.png" width="500px">
+```python
+>>> def media(*valores):
+...     soma = 0.0
+...     for n in valores:
+...         soma += n
+...     return soma / len(valores)
+...
+>>> media (1,2,3,4,5,6)
+3.5
+```
+
 No exemplo acima, que calcula a media dos valores passados omo parâmetros, os parametros são informados a função na forma de uma lista de nome **\*valores**.
 
 Observe que foi necessário acrescentar o **"\*"** antes da palavra valores. Isso foi feito para informar a função **media** que a variável **valores** não é um parâmetro simples e mas sim vários parâmetros.
@@ -342,9 +513,14 @@ Observe que foi necessário acrescentar o **"\*"** antes da palavra valores. Iss
 
 ## Função len
 A função **len** é uma  função muito útil que pode ser utilizada para saber o comprimento de uma string ou número de elementos de lista. Veja o exemplo:
-<img src="funclen.png" width="500px">
-
-
+```python
+>>> nome = 'Alberto Santos Dumont'
+>>> len(nome)
+21
+>>> lista = [1, 2, 3]
+>>> len(lista)
+3
+```
 
 ## Bibliografia
 http://turing.com.br/pydoc/2.7/tutorial/introduction.html
