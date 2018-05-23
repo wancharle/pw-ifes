@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>python.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="python-resumo-da-sintaxe-da-linguagem-python">Python: Resumo da sintaxe da linguagem python</h1>
+<h2 id="identa%C3%A7%C3%A3o-para-separar-blocos">Identação para separar blocos</h2>
+<p>A sintaxe do python é bem limpa e enxuta.
+Python não precisa de chaves “{“ para abrir e nem para fechar blocos de comandos.
+No entanto, python utiliza como alternativa a identação de blocos. Ou seja, um bloco é delimitado não por chaves, mas pela sua identação. Ou seja, a coluna onde o texto começa delimita o bloco.</p>
+<p>Para ficar claro, observe alguns exemplos de comparação com a linguagem java:</p>
+<table><tr><th>JAVA</th><th>Python</th></tr>
+<tr>
+<td>
+<pre class="hljs"><code><div>{
+   <span class="hljs-comment">// isto é um bloco java</span>
+   <span class="hljs-keyword">int</span> a=<span class="hljs-number">10</span>;
+}
+</div></code></pre>
+</td>
+<td>
+<pre class="hljs"><code><div><span class="hljs-comment"># isto é um bloco python</span>
+a=<span class="hljs-number">10</span>
+</div></code></pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre class="hljs"><code><div>{
+   <span class="hljs-comment">// este é o bloco principal</span>
+   <span class="hljs-keyword">int</span> a=<span class="hljs-number">10</span>;
+   <span class="hljs-keyword">int</span> b=<span class="hljs-number">1</span>;
+
+   <span class="hljs-keyword">if</span> (b==<span class="hljs-number">3</span>) {
+       <span class="hljs-comment">// este é bloco do if</span>
+       b=a*<span class="hljs-number">10</span>;
+
+   } <span class="hljs-keyword">else</span> {
+       <span class="hljs-comment">// este é bloco do else </span>
+       <span class="hljs-keyword">int</span> a=<span class="hljs-number">100</span>;
+       b=a*<span class="hljs-number">10</span>;
+   }
+
+   <span class="hljs-comment">// aqui voltamos ao bloco principal</span>
+   System.out.print(<span class="hljs-string">"O valor de b é "</span> + b);
+}
+</div></code></pre>
+</td>
+<td>
+<pre class="hljs"><code><div><span class="hljs-comment"># este é o bloco principal</span>
+a=<span class="hljs-number">10</span>
+b=<span class="hljs-number">1</span>
+
+<span class="hljs-keyword">if</span> b == <span class="hljs-number">3</span>:
+    <span class="hljs-comment"># este é o bloco do if</span>
+    b=a*<span class="hljs-number">10</span>
+
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-comment"># este é o bloco do else</span>
+    a=<span class="hljs-number">100</span>
+    b=a*<span class="hljs-number">10</span>
+
+<span class="hljs-comment"># aqui voltamos ao bloco principal</span>
+print(<span class="hljs-string">"O valor de b é "</span> + b)
+</div></code></pre>
+</td>
+</tr>
+</table>
+<p>Ao usar identação como delimitador de blocos python força o programador a manter seu código sempre identado e organizado. Portanto, se o programador não identar o código python não funciona. Isto é uma das vantagens do python, mas pode ser incomodo no início, pois a maioria dos programadores estão acostumados com outras linguagens que permitem códigos não identados.
+Por exemplo, observe a comparação abaixo:</p>
+<table><tr><th>Código JAVA não identado mas que funciona</th><th>Código Python com erro de identação</th></tr>
+<tr>
+<td>
+<pre class="hljs"><code><div>{
+   <span class="hljs-comment">// isto é um bloco java</span>
+   
+   <span class="hljs-keyword">int</span> a=<span class="hljs-number">10</span>; <span class="hljs-comment">// mesmo bloco</span>
+            <span class="hljs-keyword">int</span> b = <span class="hljs-number">12</span>; <span class="hljs-comment">// mesmo bloco</span>
+        <span class="hljs-keyword">int</span> c = <span class="hljs-number">40</span>; <span class="hljs-comment">// mesmo bloco</span>
+}
+</div></code></pre>
+</td>
+<td>
+<pre class="hljs"><code><div><span class="hljs-comment"># isto é um bloco python</span>
+
+a=<span class="hljs-number">10</span> <span class="hljs-comment"># mesmo bloco</span>
+        b = <span class="hljs-number">12</span> <span class="hljs-comment">#  outro bloco 1</span>
+    c = <span class="hljs-number">40</span> <span class="hljs-comment"># outro bloco 2</span>
+</div></code></pre>
+</td>
+</tr>
+</table>
+<p>O código python acima não funciona, pois ele cria blocos novos em cada linha. Cada linha começa em uma coluna (identação) diferente da anterior. <strong>Isto o python considera como um novo bloco</strong>. Portanto, o código não funciona, pois novos blocos só devem ser criados para estruturas como ifs, fors, whiles e funções.</p>
+<p>Já o código java acima funciona. Isto ocorre, pois todas as linhas estão no mesmo bloco. E apesar das linhas começarem em colunas diferentes elas não criam blocos novos. Em java blocos novos são criados com as chaves. Usamos &quot;{&quot; para abrir um bloco e &quot;}&quot; para fechar.</p>
+<h1 id="imprimindo-texto-na-tela">Imprimindo texto na tela</h1>
+<p>Um programa python que imprime o texto &quot;Bem-vindo!&quot; na tela é bem simples de se fazer quando comprado com o mesmo programa equivalente Java:</p>
+<table><tr><th>Programa Java</th><th>Programa Python</th></tr>
+<tr>
+<td>
+<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bemvindo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.print(<span class="hljs-string">"Bem-vindo!"</span>);
+    }
+}
+</div></code></pre>
+</td>
+<td>
+<pre class="hljs"><code><div>print(<span class="hljs-string">"Bem-vindo!"</span>)
+</div></code></pre>
+</td>
+</tr>
+</table>
+<h3 id="tipos-de-dados">Tipos de dados</h3>
+<p>O Python é uma linguagem não tipada (variáveis com valores dinâmicos), ou seja, não há a necessidade de declarar o tipo da variável. Assim, durante a execução do script uma variável pode receber valores do tipo “String” (texto) e, posteriormente, receber valores do tipo “int” (inteiro), &quot;float&quot;(real,fracionário) e até outros objetos.</p>
+<p>Pode-se, ainda, “forçar” uma variável a receber um tipo determinado de dados. Exemplo:</p>
+<pre class="hljs"><code><div>salario = str(<span class="hljs-number">900.0</span>)
+</div></code></pre>
+<p>No exemplo acima, o valor float 900.00 está sendo forçado a virar um valor do tipo string, ou seja, o mesmo que “900.00”.</p>
+<p>O inverso também pode ser feito, A string &quot;900.0&quot; pode ser convertida para um número do tipo float:</p>
+<pre class="hljs"><code><div>salario = float(<span class="hljs-string">"900.0"</span>)
+</div></code></pre>
+<p>No tópico a seguir, veremos mais sobre variáveis.</p>
+<h1 id="variaveis">Variaveis</h1>
+<p>Em Python, não é necessário declarar as variáveis, basta que o programador atribua um valor à variável e esta já estará guardada na memória. Para criar variáveis em Python é necessário seguir algumas regras:</p>
+<ul>
+<li>Os nomes das variáveis só podem conter letras, números e underline &quot;_&quot;.</li>
+<li>Os nomes de variáveis devem sempre começar com letra minúscula.</li>
+<li>Os nomes das variáveis são case sensitive, ou seja, diferem letras maiúsculas de minúsculas.</li>
+<li><strong>Não</strong> podemos utilizar os seguintes nomes para váriaveis: <img src="Palavras_reservadas.png"></li>
+</ul>
+<p>Abaixo temos um exemplo de criação de variaveis em python. Neste exemplo foi criado três variáveis (x, y, e total) e em seguida impresso na tela os valores:</p>
+<pre class="hljs"><code><div>x = <span class="hljs-number">10</span>
+y = <span class="hljs-number">8</span>
+total = x + y
+
+print(<span class="hljs-string">"A soma de "</span> + x + <span class="hljs-string">" com "</span> + y + <span class="hljs-string">" é igual a "</span> + total)
+</div></code></pre>
+<p>O programa acima quando executado gera a seguinte resposta na tela:</p>
+<pre class="hljs"><code><div>A soma de 10 com 8 é igual a 18
+</div></code></pre>
+<p>Conforme se pode perceber, além de não declarar, também não informamos o tipo de dados das variáveis, pois isso não é necessário no Python.</p>
+<p>Isso vale também para a criação de listas(array ou vetor) e dicionários de dados.</p>
+<h2 id="listas">Listas</h2>
+<p>Uma lista pode ser criada de várias formas:</p>
+<h3 id="listas-arrays-forma-1">Listas (arrays) Forma 1</h3>
+<p>A primeira forma de criar uma lista é usando a funçao <strong>list</strong>. Veja o exemplo abaixo que cria uma lista de números</p>
+<pre class="hljs"><code><div>numeros = list(<span class="hljs-number">13</span>,<span class="hljs-number">29</span>,<span class="hljs-number">27</span>,<span class="hljs-number">64</span>,<span class="hljs-number">22</span>)
+</div></code></pre>
+<h4 id="listas-arrays-forma-2">Listas (arrays) Forma 2</h4>
+<p>Outra forma de criar uma lista é usando o caracter []. Veja</p>
+<pre class="hljs"><code><div>numeros = [<span class="hljs-number">13</span>,<span class="hljs-number">29</span>,<span class="hljs-number">27</span>,<span class="hljs-number">64</span>,<span class="hljs-number">22</span>]
+</div></code></pre>
+<h3 id="acesso-aos-dados-de-listas">Acesso aos dados de listas</h3>
+<p>De posse de umalista podemos visualizar o conteúdo dela tendo como auxílio o caractere especial []. Vejamos alguns exemplos:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">print</span> numeros[<span class="hljs-number">1</span>] <span class="hljs-comment"># vai imprimir o valor 29</span>
+<span class="hljs-keyword">print</span> numeros[<span class="hljs-number">3</span>] <span class="hljs-comment"># vai imprimir o valor 64</span>
+<span class="hljs-keyword">print</span> numeros[<span class="hljs-number">0</span>] <span class="hljs-comment"># vai imprimir o valor 13</span>
+</div></code></pre>
+<p><strong>Observação</strong>: os indices das listas em python começam na posição 0 (zero)</p>
+<h2 id="dicion%C3%A1rios">Dicionários</h2>
+<p>Alem das listas, em python também podemos criar dicionários de dados que é uma estrutura de dados muito versátil e poderosa.</p>
+<h3 id="dicion%C3%A1rios-forma-1">Dicionários forma 1</h3>
+<p>A primeira forma de criar um dicionario é usando a funçao <strong>dict</strong>. Veja o exemplo abaixo que cria um dicionário vazio e em seguida insere chaves valores ao dicionário:</p>
+<pre class="hljs"><code><div>aluno = dict()
+aluno[<span class="hljs-string">"nome"</span>] = <span class="hljs-string">"Pedro"</span>
+aluno[<span class="hljs-string">"idade"</span>] = <span class="hljs-number">18</span>
+aluno[<span class="hljs-string">"email"</span>] = <span class="hljs-string">"pedro@gmail.com"</span>
+</div></code></pre>
+<h3 id="dicion%C3%A1rios-forma-2">Dicionários forma 2</h3>
+<p>Outra forma de criar dicionários é utilizando os carecteres de chaves {}.
+Veja um exemplo:</p>
+<pre class="hljs"><code><div>aluno = {
+    <span class="hljs-string">"nome"</span>  : <span class="hljs-string">"Pedro"</span>,
+    <span class="hljs-string">"idade"</span> : <span class="hljs-number">18</span>,
+    <span class="hljs-string">"email"</span> : <span class="hljs-string">"pedro@gmail.com"</span>
+} 
+</div></code></pre>
+<h3 id="acesso-aos-dados-de-dicion%C3%A1rios">Acesso aos dados de dicionários</h3>
+<p>Como visto acima, podemos inserir tanto string como números nos valores do dicionário.</p>
+<p>Para imprimir os dados do dicionário é simples. Ele segue a mesma notação da lista de usar [] para acessar os elementos. A diferença é que na lista usa-se números nos indices, mas no dicionário podemos usar strings(texto).</p>
+<p>Outra forma de imprimir os dados de um dicionário é utilizando a função <strong>format</strong> das strings.
+Para isso, devemos passar o dicionario como parâmetro da função format e acrescentar os caracteres <strong>**</strong> antes do nome do dicionário.</p>
+<p>Essa outra forma permite fazer um código mais limpo e organizado. Compare as duas formas</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># 1ª forma  de imprimir dados do dicionario</span>
+<span class="hljs-keyword">print</span> <span class="hljs-string">"O aluno "</span> + aluno[<span class="hljs-string">"nome"</span>] + <span class="hljs-string">" de "</span> + aluno[<span class="hljs-string">"idade"</span>] + <span class="hljs-string">" anos tem email "</span> + aluno[<span class="hljs-string">"email"</span>]
+
+<span class="hljs-comment"># 2ª forma de imprimir dados do dicionário</span>
+<span class="hljs-keyword">print</span> <span class="hljs-string">" O aluno {nome} de {idade} anos tem email {email}"</span>.format(**aluno)
+</div></code></pre>
+<p>No exemplo acima, o código produz as seguintes mensagens na tela:</p>
+<pre class="hljs"><code><div>O aluno Pedro de 18 anos tem email pedro@gmail.com
+O aluno Pedro de 18 anos tem email pedro@gmail.com
+</div></code></pre>
+<p>Podemos observar acima que ambas as formas imprimem os dados corretamente. Portanto, fica a cargo do programador escolher qual forma prefere utilizar em seu projeto.</p>
+<h1 id="concatenando-valores">Concatenando valores</h1>
+<p>A concatenação de valores é uma técnica que auxilia muito as linguagens de programação. No Pythnon utilizamos o sinal de soma (+) para concatenar os valores. Veja:</p>
+<pre class="hljs"><code><div>texto = <span class="hljs-string">"Olá mundo!"</span> + <span class="hljs-string">" Sou novo aqui."</span>
+</div></code></pre>
+<p>O código acima irá armazerar na memória uma variável chamada <strong>texto</strong> cujo o conteúdo concatenado é: <strong>&quot;Olá mundo! Sou novo aqui.&quot;</strong>.</p>
+<p>O mesmo vale para a concatenação de variáveis:</p>
+<pre class="hljs"><code><div>nome = <span class="hljs-string">"Charles"</span>
+texto = <span class="hljs-string">"Meu nome é "</span> +  nome
+</div></code></pre>
+<p>O código acima irá armazerar na memória uma variável chamada <strong>texto</strong> cujo o conteúdo concatenado é: <strong>&quot;Meu nome é Charles</strong>.</p>
+<p>A concatenação também funciona com listas:</p>
+<pre class="hljs"><code><div>lista1 = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]
+lista2 = [<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]
+lista3 = lista1 + lista2
+</div></code></pre>
+<p>O código acima irá armazerar na memória uma variável chamada <strong>lista3</strong> cujo o conteúdo concatenado é: <strong>[1,2,3,4,5]</strong>.</p>
+<h1 id="operadores">Operadores</h1>
+<h2 id="operadores-aritim%C3%A9ticos">Operadores Aritiméticos</h2>
+<img src="operadores.png">
+<h2 id="operadores-condicionais">Operadores Condicionais</h2>
+<img src="opcondicional.png">
+<h2 id="operadores-condicionais-combinados">Operadores Condicionais combinados</h2>
+<img src="opcombinado.png">
+<h2 id="operadores-condicionais-combinados-com-and-or-e-not">Operadores Condicionais combinados com AND, OR e NOT</h2>
+<img src="opand2.png">
+<h1 id="estruturas">Estruturas</h1>
+<h2 id="if">IF</h2>
+<table>
+<tr><th>notação</th><th>Exemplo</th></tr>
+<tr><td><img src="if1.png"></td>
+<td><img src="if2.png"></td>
+</tr></table>
+<h2 id="for">FOR</h2>
+<table>
+<tr><th>notação</th><th>Exemplo</th></tr>
+<tr><td><img src="for1.png"></td>
+<td><img src="for2.png"></td>
+</tr></table>
+<h2 id="while">WHILE</h2>
+<table>
+<tr><th>notação</th><th>Exemplo</th></tr>
+<tr><td><img src="while1.png"></td>
+<td><img src="while2.png"></td>
+</tr></table>
+<h1 id="fun%C3%A7%C3%B5es">Funções</h1>
+<h2 id="nota%C3%A7ao">Notaçao</h2>
+<table>
+<tr><th>notação</th><th>Exemplo</th></tr>
+<tr><td><img src="func1.png"></td>
+<td><img src="func2.png"></td>
+</tr></table>
+<p>Funções podem ter parametros com valores padrão. Veja o exemplo:
+<img src="funcpadrao.png"></p>
+<p>E funções podem ter número de parametros variáveis:
+<img src="funcmult.png"></p>
+<h1 id="fun%C3%A7%C3%B5es-%C3%BAteis">Funções úteis</h1>
+<h2 id="fun%C3%A7%C3%A3o-len">função len</h2>
+<img src="funclen.png">
+<h2 id="bibliografia">Bibliografia</h2>
+<p>http://turing.com.br/pydoc/2.7/tutorial/introduction.html
+http://turing.com.br/pydoc/2.7/tutorial/modules.html
+http://turing.com.br/pydoc/2.7/tutorial/controlflow.html
+http://turing.com.br/pydoc/2.7/tutorial/datastructures.html</p>
+<!-- 
+## Flask e Web
+##Passsando informações entre paginas
+## metodo GET e POST
+### sessoes
+### upload de arquivos 
+-->
+
+</body>
+</html>
