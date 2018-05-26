@@ -99,7 +99,7 @@ Abaixo segue o código do arquivo app.py com as rotas:
 #coding: UTF-8
 from flask import Flask, render_template
 
-app =  Flask(__name__
+app =  Flask(__name__)
 
 @app.route("/")
 def pagina_index():
@@ -156,7 +156,7 @@ Abaixo segue o código do arquivo clientes.html:
 ```
 
 
-Abaixo segue o código do arquivo clientes.html:
+Abaixo segue o código do arquivo produtos.html:
 
 ```HTML
 <!DOCTYPE html>

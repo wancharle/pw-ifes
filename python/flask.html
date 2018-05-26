@@ -307,7 +307,7 @@ Arquivos que forem colocados nesta pasta podem ser acessados no website atraves 
 <pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment">#coding: UTF-8</span>
 <span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask<span class="token punctuation">,</span> render_template
 
-app <span class="token operator">=</span>  Flask<span class="token punctuation">(</span>__name__
+app <span class="token operator">=</span>  Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
 
 @app<span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>
 <span class="token keyword">def</span> <span class="token function">pagina_index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -354,7 +354,7 @@ app <span class="token operator">=</span>  Flask<span class="token punctuation">
 
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-</pre><p>Abaixo segue o código do arquivo clientes.html:</p>
+</pre><p>Abaixo segue o código do arquivo produtos.html:</p>
 <pre data-role="codeBlock" data-info="HTML" class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pt-br<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
