@@ -184,6 +184,9 @@ Abaixo segue o código do arquivo produtos.html:
 
 Após criar todos os arquivos, dê um duplo clique no script iniciar-servidor.bat para iniciar o servidor do projeto e teste o projeto acessando a url http://localhost/
 
+Veja o vídeo onde mostro a construção desse projeto:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i6sk2d0zf_s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 # Bibliografia
 
 Flask - QuickStart: http://flask.pocoo.org/docs/1.0/quickstart/
