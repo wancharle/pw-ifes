@@ -257,14 +257,14 @@ A concatenação de valores é uma técnica que auxilia muito as linguagens de p
 ```python
 texto = "Olá mundo!" + " Sou novo aqui."
 ```
-O código acima irá armazerar na memória uma variável chamada **texto** cujo o conteúdo concatenado é: **"Olá mundo! Sou novo aqui."**.
+O código acima irá armazenar na memória uma variável chamada **texto** cujo o conteúdo concatenado é: **"Olá mundo! Sou novo aqui."**.
 
 O mesmo vale para a concatenação de variáveis: 
 ```python
 nome = "Charles"
 texto = "Meu nome é " +  nome
 ```
-O código acima irá armazerar na memória uma variável chamada **texto** cujo o conteúdo concatenado é: **"Meu nome é Charles**.
+O código acima irá armazenar na memória uma variável chamada **texto** cujo o conteúdo concatenado é: **"Meu nome é Charles**.
 
 A concatenação também funciona com listas:
 ```python
@@ -272,7 +272,7 @@ lista1 = [1,2,3]
 lista2 = [4,5]
 lista3 = lista1 + lista2
 ```
-O código acima irá armazerar na memória uma variável chamada **lista3** cujo o conteúdo concatenado é: **[1,2,3,4,5]**.
+O código acima irá armazenar na memória uma variável chamada **lista3** cujo o conteúdo concatenado é: **[1,2,3,4,5]**.
 
 # Operadores
 ## Operadores Aritiméticos
